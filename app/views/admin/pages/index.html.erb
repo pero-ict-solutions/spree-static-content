@@ -1,0 +1,30 @@
+<h1><%=t("Static pages") %></h1>
+
+<table class="admin-report" width="545">
+	<thead>
+		<tr>
+      		<th><%=t("Title")%></th>
+      		<th><%=t("Slug")%></th>
+      		<th><%=t("Action")%></th>
+    	</tr>
+  	</thead>
+	
+	<tbody>
+    	<% @pages.each do |page| %>
+		<tr class="<%= cycle('even', 'odd') %>">
+			<td>
+				<%= page.title%>
+			</td>
+			<td>
+				<%= page.slug%>
+			</td>
+			<td>
+	          <%=link_to t("Edit"), edit_object_url(page) %> |
+	          <%=link_to t("Delete"), object_url(page), :method => :delete %>
+	        </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to t("New Page"), new_object_url %>
