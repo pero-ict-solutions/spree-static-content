@@ -1,3 +1,3 @@
 = Static Content
 
-Description goes here
+Extension to manage the static pages like an about page for example.
