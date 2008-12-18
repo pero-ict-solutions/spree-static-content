@@ -4,7 +4,7 @@
 class StaticContentExtension < Spree::Extension
   version "0.1"
   description "Static content extention for managing static content."
-  url "http://yourwebsite.com/static_content"
+  url "http://github.com/PeterBerkenbosch/spree-static-content"
 
   # Please use static_content/config/routes.rb instead for extension routes.
 
@@ -21,7 +21,7 @@ class StaticContentExtension < Spree::Extension
         @extension_links << {
           :link => admin_pages_path,
           :link_text => t('Static pages'),
-          :description => t('Manae the static pages')
+          :description => t('Manage the static pages')
         }
       end
     end
