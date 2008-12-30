@@ -1,3 +1,18 @@
+<% content_for :head do %>
+
+	<%= javascript_include_tag 'jquery/jquery.js' %>
+	<%= javascript_include_tag 'wymeditor/jquery.wymeditor.pack.js' %>
+	
+	<script type="text/javascript" charset="utf-8">
+		
+		jQuery(function() {
+		    jQuery('.wymeditor').wymeditor();
+		});
+		
+	</script>
+
+<% end %>
+
 <table class="admin-report" width="545">
   <tr>
     <td valign="top"><%=t("Title")%>:</td>
@@ -9,6 +24,6 @@
   </tr>
   <tr>
     <td valign="top"><%=t("Body")%>:</td>
-    <td><%= f.text_area :body, {"style" => "width:500px"} %> </td>
+    <td><%= f.text_area :body, {"style" => "width:500px", "class"=> "wymeditor"} %> </td>
   </tr>
 </table>
