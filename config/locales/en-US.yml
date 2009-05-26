@@ -1,0 +1,5 @@
+---
+en-US:
+    ext_static_content_static_pages: Static pages
+    ext_static_content_static_pages_desc: Manage static page with WYSIWYG editor.
+    ext_static_content_title: Title

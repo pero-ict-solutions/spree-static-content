@@ -20,8 +20,8 @@ class StaticContentExtension < Spree::Extension
       def add_static_pages_links
         @extension_links << {
           :link => admin_pages_path,
-          :link_text => t('Static pages'),
-          :description => t('Manage the static pages')
+          :link_text => t('ext_static_content_static_pages'),
+          :description => t('ext_static_content_static_pages_desc')
         }
       end
     end

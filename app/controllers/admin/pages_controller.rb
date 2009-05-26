@@ -1,7 +1,5 @@
-class Admin::PagesController < ApplicationController
+class Admin::PagesController < Admin::BaseController
   resource_controller
-  layout 'admin'
-  require_role :admin
   
   update.response do |wants|
     wants.html { redirect_to collection_url }
