@@ -1,10 +1,12 @@
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
 <h1><%=t("ext_static_content_static_pages") %></h1>
 
 <table class="admin-report" width="545">
 	<thead>
 		<tr>
-      		<th><%=t("title")%></th>
-      		<th><%=t("slug")%></th>
+      		<th><%=t("ext_static_content_title")%></th>
+      		<th><%=t("ext_static_content_slug")%></th>
       		<th><%=t("action")%></th>
     	</tr>
   	</thead>
@@ -19,12 +21,12 @@
 				<%= page.slug%>
 			</td>
 			<td>
-	          <%=link_to t("Edit"), edit_object_url(page) %> |
-	          <%=link_to t("Delete"), object_url(page), :method => :delete %>
+	          <%=link_to t("edit"), edit_object_url(page) %> |
+	          <%=link_to t("delete"), object_url(page), :method => :delete %>
 	        </td>
 		</tr>
 		<% end %>
 	</tbody>
 </table>
 
-<%= link_to t("New Page"), new_object_url %>
+<%= link_to t("ext_static_content_new_page"), new_object_url %>
