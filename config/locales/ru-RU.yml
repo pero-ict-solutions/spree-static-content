@@ -1,0 +1,9 @@
+---
+ru-RU:
+    ext_static_content_static_pages: Статические страницы
+    ext_static_content_static_pages_desc: Управление статическими страницами
+    ext_static_content_title: Заголовок
+    ext_static_content_slug: Постоянная ссылка
+    ext_static_content_body: Тело
+    ext_static_content_new_page: Новая страница
+    ext_static_content_editing_page: Редактировать
