@@ -7,6 +7,6 @@
 <% form_for(:page, :url => collection_url) do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
   <p>
-    <%= submit_tag t("create"), {"class" => "wymupdate"}%> or <%= link_to t("cancel"), admin_pages_path%>
+    <%= submit_tag t("create"), {"class" => "wymupdate"}%> <%= t("ext_static_content_or") %> <%= link_to t("cancel"), admin_pages_path%>
   </p>
 <% end %>
