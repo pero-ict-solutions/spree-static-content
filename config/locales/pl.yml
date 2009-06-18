@@ -2,7 +2,7 @@
 pl:
     ext_static_content_static_pages: Strony statyczne
     ext_static_content_static_pages_desc: Zarządzaj stronami statycznymi.
-    ext_static_content_title: Tytół
+    ext_static_content_title: Tytuł
     ext_static_content_slug: Skrót
     ext_static_content_body: Zawartość
     ext_static_content_new_page: Nowa strona
