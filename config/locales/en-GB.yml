@@ -1,0 +1,9 @@
+---
+en-GB:
+    ext_static_content_static_pages: Static pages
+    ext_static_content_static_pages_desc: Manage static page with WYSIWYG editor.
+    ext_static_content_title: Title
+    ext_static_content_slug: Slug
+    ext_static_content_body: Body
+    ext_static_content_new_page: New page
+    ext_static_content_editing_page: Editing page
