@@ -1,0 +1,5 @@
+h2. Contributers list - Thanks guys!
+
+|Maxim Filatov|http://github.com/Bregor|
+|Marcin Raczkowski|http://github.com/swistak|
+|Roman Smirnov|http://github.com/romul|
