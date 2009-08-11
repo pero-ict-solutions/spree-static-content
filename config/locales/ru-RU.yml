@@ -1,9 +1,13 @@
 ---
 ru-RU:
-    ext_static_content_static_pages: Статические страницы
-    ext_static_content_static_pages_desc: Управление статическими страницами
-    ext_static_content_title: Заголовок
-    ext_static_content_slug: Постоянная ссылка
-    ext_static_content_body: Тело
-    ext_static_content_new_page: Новая страница
-    ext_static_content_editing_page: Редактировать
+    ext_static_content_static_pages: "Статические страницы"
+    ext_static_content_static_pages_desc: "Управление статическими страницами"
+    ext_static_content_title: "Заголовок"
+    ext_static_content_slug: "Постоянная ссылка"
+    ext_static_content_body: "Тело"
+    ext_static_content_new_page: "Новая страница"
+    ext_static_content_editing_page: "Редактировать"
+    ext_static_content_foreign_link: "Внешняя ссылка (URL)"
+    ext_static_content_show_in_header: "Отображать в верхнем меню"
+    ext_static_content_show_in_footer: "Отображать в нижнем меню"
+    ext_static_content_position: "Позиция в меню"

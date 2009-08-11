@@ -18,7 +18,7 @@
 				<%= page.title%>
 			</td>
 			<td>
-				<%= page.slug%>
+				<%= page.slug.blank? ? page.foreign_link : page.slug  %>
 			</td>
 			<td>
 	          <%=link_to t("edit"), edit_object_url(page) %> |
