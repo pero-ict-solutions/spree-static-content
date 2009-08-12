@@ -3,15 +3,9 @@
 
 class StaticContentExtension < Spree::Extension
   version "0.1"
-  description "Static content extention for managing static content."
+  description "Static content extension for managing static content."
   url "http://github.com/PeterBerkenbosch/spree-static-content"
 
-  # Please use static_content/config/routes.rb instead for extension routes.
-
-  # def self.require_gems(config)
-  #   config.gem "gemname-goes-here", :version => '1.2.3'
-  # end
-  
   def activate
     
     Admin::ConfigurationsController.class_eval do
@@ -25,12 +19,34 @@ class StaticContentExtension < Spree::Extension
         }
       end
     end
-    
-    ContentController.class_eval do
-      def show
+
+    Spree::BaseController.class_eval do
+      
+      # ProductsHelper needed for seo_url method used when generating
+      # taxonomies partial in content/show.html.erb.
+      helper :products
+      # Use before_filter instead of prepend_before_filter to ensure that 
+      # ApplicationController filters that the view may require are run.
+      before_filter :render_page_if_exists
+      
+      def render_page_if_exists
+        # Using request.path allows us to override dynamic pages including
+        # the home page, product and taxon pages. params[:path] is only good
+        # for requests that get as far as content_controller. params[:path]
+        # query left in for backwards compatibility for slugs that don't start
+        # with a slash.
         @page = Page.find_by_slug(params[:path])
-        render :file => "#{RAILS_ROOT}/public/404.html", :layout => false, :status => 404 unless @page 
+        @page = Page.find_by_slug(request.path) unless @page
+        render :template => 'content/show' if @page
       end
+      
+      # Returns page.title for use in the <title> element. 
+      def title_with_page_title_check
+        return @page.title if @page && !@page.title.blank?
+        title_without_page_title_check
+      end
+      alias_method_chain :title, :page_title_check
     end
+    
   end
 end
