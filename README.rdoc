@@ -18,14 +18,15 @@ The dynamic page can be made available again if you delete the static page or ch
 Create your own copy of the app/views/content/show.html.erb template in your site
 extension to change the layout of the static pages.
 
-INSTALLATION:
+== INSTALLATION:
 Suggest you load this extension before all other extensions as it 
 specifies a filter in Spree::BaseController that may not get inherited by its
 controller subclasses if other extensions modify these controller subclasses
 first.  
 
 To load this extension first, add this to your environment.rb inside the
-"Spree::Initializer.run do |config|" block:
 
-config.extensions = [:static_content, :all]
+"Spree::Initializer.run do |config|" block:
+===
+  config.extensions = [:static_content, :all]
 
