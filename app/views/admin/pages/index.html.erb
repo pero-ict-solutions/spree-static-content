@@ -26,7 +26,7 @@
 			</td>
 			<td>
 	          <%=link_to t("edit"), edit_object_url(page) %> |
-	          <%=link_to t("delete"), object_url(page), :method => :delete %>
+	          <%=link_to t("delete"), object_url(page), :method => :delete, :confirm=> t("ext_static_content_confirm_delete") %>
 	        </td>
 		</tr>
 		<% end %>
