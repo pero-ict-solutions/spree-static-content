@@ -4,6 +4,7 @@ class Page < ActiveRecord::Base
   
   named_scope :header_links, :conditions => ["show_in_header = ?", true], :order => 'position'
   named_scope :footer_links, :conditions => ["show_in_footer = ?", true], :order => 'position'
+  named_scope :visible, :conditions => {:visible => true}
 
   def link
     foreign_link.blank? ? "/pages/" + slug : foreign_link
