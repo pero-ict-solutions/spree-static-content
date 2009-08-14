@@ -1,5 +1,6 @@
 ---
 pt-BR:
+    pages: Páginas
     ext_static_content_static_pages: Páginas estáticas
     ext_static_content_static_pages_desc: Administrar página estática com editor visual (WYSIWYG).
     ext_static_content_title: Título
