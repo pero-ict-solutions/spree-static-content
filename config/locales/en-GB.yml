@@ -11,3 +11,6 @@ en-GB:
     ext_static_content_show_in_header: Show in header
     ext_static_content_show_in_footer: Show in footer
     ext_static_content_position: Position
+    ext_static_content_visible: Visible
+    ext_static_content_confirm_delete: Are you sure ?
+    ext_static_content_link: Link

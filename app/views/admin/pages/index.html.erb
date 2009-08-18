@@ -6,7 +6,7 @@
 	<thead>
 		<tr>
       		<th><%=t("ext_static_content_title")%></th>
-      		<th><%=t("ext_static_content_slug")%></th>
+      		<th><%=t("ext_static_content_link")%></th>
       		<th><%=t("ext_static_content_visible")%></th>
       		<th><%=t("action")%></th>
     	</tr>
@@ -16,13 +16,13 @@
     	<% @pages.each do |page| %>
 		<tr class="<%= cycle('even', 'odd') %>">
 			<td>
-				<%= page.title%>
+				<%= page.title %>
 			</td>
 			<td>
-				<%= page.slug.blank? ? page.foreign_link : page.slug  %>
+				<%= page.link %>
 			</td>
 			<td>
-			  <%= page.visible%>
+			  <%= page.visible %>
 			</td>
 			<td>
 	          <%=link_to t("edit"), edit_object_url(page) %> |

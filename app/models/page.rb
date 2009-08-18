@@ -7,11 +7,19 @@ class Page < ActiveRecord::Base
   named_scope :visible, :conditions => {:visible => true}
 
   def link
-    foreign_link.blank? ? "/pages/" + slug : foreign_link
+    foreign_link.blank? ? slug_link : foreign_link
   end
 
 private  
   def not_using_foreign_link?
     foreign_link.blank?
-  end  
+  end
+
+  def slug_link
+    ensure_slash_prefix slug
+  end
+  
+  def ensure_slash_prefix(str)
+    str.index('/') == 0 ? str : '/' + str
+  end
 end
