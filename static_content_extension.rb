@@ -49,7 +49,7 @@ class StaticContentExtension < Spree::Extension
         # for requests that get as far as content_controller. params[:path]
         # query left in for backwards compatibility for slugs that don't start
         # with a slash.
-        @page = Page.visible.find_by_slug(params[:path])
+        @page = Page.visible.find_by_slug(params[:path]) if params[:path]
         @page = Page.visible.find_by_slug(request.path) unless @page
         render :template => 'content/show' if @page
       end
