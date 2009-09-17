@@ -7,6 +7,7 @@ class Admin::PagesController < Admin::BaseController
   
   update.after do
     Rails.cache.delete('pages')
+    expire_page :controller => '/content', :action => 'show', :path => @page.slug
   end
   
   create.response do |wants|
