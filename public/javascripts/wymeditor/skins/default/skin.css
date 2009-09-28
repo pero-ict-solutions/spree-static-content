@@ -81,7 +81,7 @@
 
     /*option: add this class to a section to make it render as a dropdown menu*/
         .wym_skin_default .wym_dropdown h2        { display: block; }
-        .wym_skin_default .wym_dropdown ul        { display: none; position: absolute; background: white; }
+        .wym_skin_default .wym_dropdown ul        { background: white; }
         .wym_skin_default .wym_dropdown:hover ul,
         .wym_skin_default .wym_dropdown.hover ul  { display: block; }
 

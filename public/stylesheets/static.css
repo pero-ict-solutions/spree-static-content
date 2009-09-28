@@ -1,0 +1,42 @@
+
+/* EDITOR RELATED STYLES - CUSTOMIZE FOR YOUR NEEDS */
+/*
+    The classes panel, the visual feedback and the preview
+    will be affected by these values.
+
+    - Commented styles inside style definitions are used for visual
+      feedback when using the editor.
+    - Comments before opening the style are used as caption.
+    - Comments after the class name and before the style declaration ({)
+      define the jQuery expression that decides whether this
+      style should be applied or not.
+
+    Note: the WYMeditor and /WYMeditor comments below are required
+    for the CSS parser to work properly.
+*/
+
+/* WYMeditor */
+
+/* Rozstrzelony */
+#static-content .justified /* p, h1, h2, h3, h4, h5, h6 */ {
+  text-align: justify;
+  /* text-align: justify; */
+}
+
+/* Wyśrodkowany */
+#static-content .centerd /* p, h1, h2, h3, h4, h5, h6 */ {
+  text-align: center;
+  /* text-align: center; */
+}
+
+/* Powiększ! */
+#static-content .bigger /* p, code */{
+  font-size: 1.2em;
+  /* font-size: 1.2em; */
+}
+
+/* /WYMeditor */
+/* END EDITOR RELATED STYLES */
+
+
+/* YOU CAN ADD NON-WYMEDITOR RELATED STYLES HERE */

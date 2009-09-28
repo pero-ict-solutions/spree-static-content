@@ -1,19 +1,30 @@
 <% content_for :head do %>
 
-	<%= javascript_include_tag 'jquery/jquery.js' %>
-	<%= javascript_include_tag 'wymeditor/jquery.wymeditor.pack.js' %>
-	
-	<script type="text/javascript" charset="utf-8">
+  <%= javascript_include_tag 'jquery/jquery.js' %>
+  <%= javascript_include_tag 'wymeditor/jquery.wymeditor.js' %>
+
+
+  <script type="text/javascript" charset="utf-8">
 		
-		var $j = jQuery.noConflict();
-		$j(function() {
-			$j('.wymeditor').wymeditor({
-		        xhtmlParser: 'xhtml_parser.js',
-		        cssParser:   'wym_css_parser.js'
-		    });
-		});
+    var $j = jQuery.noConflict();
+    $j(function() {
+      $j('.wymeditor').wymeditor({
+        xhtmlParser: 'xhtml_parser.js',
+        cssParser:   'wym_css_parser.js',
+        stylesheet: '/stylesheets/static.css?v='+Math.random(),
+        containersItems: [
+          {'name': 'P', 'title': 'Paragraph', 'css': 'wym_containers_p'},
+          {'name': 'H1', 'title': 'Heading_1', 'css': 'wym_containers_h1'},
+          {'name': 'H2', 'title': 'Heading_2', 'css': 'wym_containers_h2'},
+          {'name': 'H3', 'title': 'Heading_3', 'css': 'wym_containers_h3'},
+          {'name': 'PRE', 'title': 'Preformatted', 'css': 'wym_containers_pre'},
+          {'name': 'BLOCKQUOTE', 'title': 'Blockquote', 'css': 'wym_containers_blockquote'},
+        ],
+        lang: 'pl'
+      });
+    });
 		
-	</script>
+  </script>
 <% end %>
 
 <table class="admin-report" width="545">
