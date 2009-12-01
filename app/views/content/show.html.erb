@@ -1,3 +1,10 @@
+<% content_for :sidebar do %>
+  <% if "products" == @current_controller && @taxon %>
+    <%= render :partial => "shared/filters" %>
+  <% else %>
+    <%= render :partial => "shared/taxonomies" %>
+  <% end %>
+<% end %>
 <h2><%=@page.title%></h2>
 <p>
   <%=@page.body%>
