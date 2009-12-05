@@ -1,18 +1,17 @@
 ---
 es-ES:
-
-pages: Pages
-ext_static_content_static_pages: Páginas estáticas
-ext_static_content_static_pages_desc: Administrar página estática con el editor WYSIWYG.
-ext_static_content_title: Título
-ext_static_content_slug: Slug
-ext_static_content_body: Cuerpo
-ext_static_content_new_page: Nueva página
-ext_static_content_editing_page: Edición de página
-ext_static_content_foreign_link: Enlace externo (URL)
-ext_static_content_show_in_header: Mostrar en la cabecera
-ext_static_content_show_in_footer: Mostrar en el pié de página
-ext_static_content_position: Posición
-ext_static_content_visible: Visible
-ext_static_content_confirm_delete: ¿ Estás seguro ?
-ext_static_content_link: Enlace
+  pages: Pages
+  ext_static_content_static_pages: Páginas estáticas
+  ext_static_content_static_pages_desc: Administrar página estática con el editor WYSIWYG.
+  ext_static_content_title: Título
+  ext_static_content_slug: Slug
+  ext_static_content_body: Cuerpo
+  ext_static_content_new_page: Nueva página
+  ext_static_content_editing_page: Edición de página
+  ext_static_content_foreign_link: Enlace externo (URL)
+  ext_static_content_show_in_header: Mostrar en la cabecera
+  ext_static_content_show_in_footer: Mostrar en el pié de página
+  ext_static_content_position: Posición
+  ext_static_content_visible: Visible
+  ext_static_content_confirm_delete: ¿ Estás seguro ?
+  ext_static_content_link: Enlace
