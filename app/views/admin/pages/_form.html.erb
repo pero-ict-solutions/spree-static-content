@@ -45,6 +45,14 @@
     <td><%= f.text_field :foreign_link, {"style" => "width:500px"} %></td>
   </tr>
   <tr>
+    <td valign="top"><%=t("ext_static_content_meta_keywords")%>:</td>
+    <td><%= f.text_field :meta_keywords, {"style" => "width:500px"} %></td>
+  </tr>
+  <tr>
+    <td valign="top"><%=t("ext_static_content_meta_description")%>:</td>
+    <td><%= f.text_field :meta_description, {"style" => "width:500px"} %></td>
+  </tr>
+  <tr>
     <td valign="top"><%=t("ext_static_content_show_in_header")%>:</td>
     <td><%= f.check_box :show_in_header %></td>
   </tr>
@@ -58,6 +66,6 @@
   </tr>  
   <tr>
     <td valign="top"><%=t("ext_static_content_visible")%>:</td>
-    <td><%= f.check_box :visible %> </td>
+    <td><%= f.check_box :visible %></td>
   </tr>
 </table>
