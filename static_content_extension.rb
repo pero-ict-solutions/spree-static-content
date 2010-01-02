@@ -7,16 +7,8 @@ class StaticContentExtension < Spree::Extension
   url "http://github.com/PeterBerkenbosch/spree-static-content"
 
   def activate
-    # add Pages tab
-    Admin::BaseController.class_eval do
-      before_filter :add_static_pages_tab
-      def add_static_pages_tab
-        @extension_tabs <<  [ :pages ]
-      end
-    end
-   
+    
     Spree::BaseController.class_eval do
-      
       # ProductsHelper needed for seo_url method used when generating
       # taxonomies partial in content/show.html.erb.
       helper :products
