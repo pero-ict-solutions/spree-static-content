@@ -7,21 +7,6 @@ class StaticContentExtension < Spree::Extension
   url "http://github.com/PeterBerkenbosch/spree-static-content"
 
   def activate
-    
-    # add Pages tab
-    Admin::BaseController.class_eval do
-      before_filter :add_static_pages_tab
-
-      def add_static_pages_tab
-        # @extension_tabs << [ :pages, {
-         #                        :link => admin_pages_path,
-         #                        :link_text => t('ext_static_content_static_pages'),
-         #                        :description => t('ext_static_content_static_pages_desc')
-         #                      } ]
-          @extension_tabs <<  [ :pages ]
-      end
-    end
-    
     # Admin::ConfigurationsController.class_eval do
     #   before_filter :add_static_pages_links, :only => :index
     #   
