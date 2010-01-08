@@ -41,7 +41,7 @@ class StaticContentExtension < Spree::Extension
       alias_method_chain :title, :page_title_check
     end
 
-    if Spree::Version::Major.to_i == 0 && Spree::Version::Minor.to_i <= 9 && Spree::Version::Tiny.to_i < 99
+    if not defined?(Spree::ThemeSupport)
       Admin::ConfigurationsController.class_eval do
         before_filter :add_static_pages_links, :only => :index
 
