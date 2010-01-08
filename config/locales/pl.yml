@@ -1,5 +1,6 @@
 ---
 pl:
+    pages: Strony statyczne
     ext_static_content_static_pages: Strony statyczne
     ext_static_content_static_pages_desc: Zarządzaj stronami statycznymi.
     ext_static_content_title: Tytuł
@@ -7,4 +8,13 @@ pl:
     ext_static_content_body: Zawartość
     ext_static_content_new_page: Nowa strona
     ext_static_content_editing_page: Edycja strony
-    ext_static_content_visible: Widoczna na stronie głównej
+    ext_static_content_foreign_link: Odnośnik zewnętrzny
+    ext_static_content_show_in_header: Pokaż w nagłówku
+    ext_static_content_show_in_footer: Pokaż w stopce
+    ext_static_content_position: Pozycja
+    ext_static_content_visible: Widoczna
+    ext_static_content_confirm_delete: Jesteś pewien ?
+    ext_static_content_link: Odnośnik
+    ext_static_content_meta_title: Tytół (w nagłówku przeglądarki)
+    ext_static_content_meta_keywords: Słowa kluczowe (SEO)
+    ext_static_content_meta_description: Skrócony opis (SEO)
