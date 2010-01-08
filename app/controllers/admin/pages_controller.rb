@@ -6,16 +6,16 @@ class Admin::PagesController < Admin::BaseController
   end
   
   update.after do
-    Rails.cache.delete('pages')
-    expire_page :controller => '/content', :action => 'show', :path => @page.slug
+    expire_page :controller => 'static_content', :action => 'show', :path => @page.slug
+    Rails.cache.delete('pag_not_exist/'+@page.slug)
   end
   
   create.response do |wants|
     wants.html { redirect_to collection_url }
   end
-  
+
   create.after do
-    Rails.cache.delete('pages')
+    Rails.cache.delete('pag_not_exist/'+@page.slug)
   end
-  
+
 end

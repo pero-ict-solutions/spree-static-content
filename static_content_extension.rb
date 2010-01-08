@@ -15,16 +15,22 @@ class StaticContentExtension < Spree::Extension
       # Use before_filter instead of prepend_before_filter to ensure that 
       # ApplicationController filters that the view may require are run.
       before_filter :render_page_if_exists
-      
+
+      # Checks if page is not beeing overriden by static one that starts with /
+      #
+      # Using request.path allows us to override dynamic pages including
+      # the home page, product and taxon pages.
       def render_page_if_exists
-        # Using request.path allows us to override dynamic pages including
-        # the home page, product and taxon pages. params[:path] is only good
-        # for requests that get as far as content_controller. params[:path]
-        # query left in for backwards compatibility for slugs that don't start
-        # with a slash.
-        @page = Page.visible.find_by_slug(params[:path]) if params[:path]
-        @page = Page.visible.find_by_slug(request.path) unless @page
-        render :template => 'content/show' if @page
+        # If we don't know if page exists we assume it's and we query DB.
+        # But we realy don't want to query DB on each page we're sure doesn't exist!
+        return if Rails.cache.fetch('page_not_exist/'+request.path)
+
+        if @page = Page.visible.find_by_slug(request.path)
+          render :template => 'static_content/show'
+        else
+          Rails.cache.write('page_not_exist/'+request.path, true)
+          return(nil)
+        end
       end
       
       # Returns page.title for use in the <title> element. 
@@ -34,6 +40,19 @@ class StaticContentExtension < Spree::Extension
       end
       alias_method_chain :title, :page_title_check
     end
-    
+
+    if Spree::Version::Major.to_i == 0 && Spree::Version::Minor.to_i <= 9 && Spree::Version::Tiny.to_i < 99
+      Admin::ConfigurationsController.class_eval do
+        before_filter :add_static_pages_links, :only => :index
+
+        def add_static_pages_links
+          @extension_links << {
+            :link => admin_pages_path,
+            :link_text => t('ext_static_content_static_pages'),
+            :description => t('ext_static_content_static_pages_desc')
+          }
+        end
+      end
+    end
   end
 end
