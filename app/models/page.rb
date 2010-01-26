@@ -23,6 +23,9 @@ class Page < ActiveRecord::Base
         Page.update_all("position = position - 1", ["? < position AND position <= ?", prev_position,  self.position])
       end
     end
+    
+    self.slug = slug_link
+    
   end
 
   def link
