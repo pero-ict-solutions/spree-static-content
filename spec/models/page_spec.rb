@@ -12,4 +12,9 @@ describe Page do
   it "should be valid" do
     @page.should be_valid
   end
+  
+  it "should add an / to the slug" do
+    @page.slug.should == "/test-page"
+  end
+  
 end
