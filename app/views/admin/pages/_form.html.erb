@@ -5,7 +5,7 @@
 
 
   <script type="text/javascript" charset="utf-8">
-		
+
     var $j = jQuery.noConflict();
     $j(function() {
       $j('.wymeditor').wymeditor({
@@ -23,7 +23,7 @@
         lang: '<%= I18n.locale.to_s.split("-").first %>'
       });
     });
-		
+
   </script>
 <% end %>
 
@@ -59,11 +59,15 @@
   <tr>
     <td valign="top"><%=t("ext_static_content_show_in_footer")%>:</td>
     <td><%= f.check_box :show_in_footer %></td>
-  </tr>   
+  </tr>
   <tr>
     <td valign="top"><%=t("ext_static_content_position")%>:</td>
     <td><%= f.text_field :position %></td>
-  </tr>  
+  </tr>
+  <tr>
+    <td valign="top"><%=t("ext_static_content_layout")%>:</td>
+    <td><%= f.text_field :layout %></td>
+  </tr>
   <tr>
     <td valign="top"><%=t("ext_static_content_visible")%>:</td>
     <td><%= f.check_box :visible %></td>

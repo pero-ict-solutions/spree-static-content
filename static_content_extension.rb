@@ -7,12 +7,12 @@ class StaticContentExtension < Spree::Extension
   url "http://github.com/PeterBerkenbosch/spree-static-content"
 
   def activate
-    
+
     Spree::BaseController.class_eval do
       # ProductsHelper needed for seo_url method used when generating
       # taxonomies partial in content/show.html.erb.
       helper :products
-      # Use before_filter instead of prepend_before_filter to ensure that 
+      # Use before_filter instead of prepend_before_filter to ensure that
       # ApplicationController filters that the view may require are run.
       before_filter :render_page_if_exists
 
@@ -26,14 +26,18 @@ class StaticContentExtension < Spree::Extension
         return if Rails.cache.fetch('page_not_exist/'+request.path)
 
         if @page = Page.visible.find_by_slug(request.path)
-          render :template => 'static_content/show'
+          if @page.layout && !@page.layout.empty?
+            render :template => 'content/show', :layout => @page.layout
+          else
+            render :template => 'content/show'
+          end
         else
           Rails.cache.write('page_not_exist/'+request.path, true)
           return(nil)
         end
       end
-      
-      # Returns page.title for use in the <title> element. 
+
+      # Returns page.title for use in the <title> element.
       def title_with_page_title_check
         return @page.title if @page && !@page.title.blank?
         title_without_page_title_check
