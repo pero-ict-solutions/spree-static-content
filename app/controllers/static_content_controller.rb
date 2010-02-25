@@ -4,7 +4,7 @@ class StaticContentController < Spree::BaseController
   def show
     path = case params[:path]
     when Array
-      params[:path].join("/")
+      '/' + params[:path].join("/")
     when String
       params[:path]
     when nil
