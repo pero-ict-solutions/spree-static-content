@@ -15,6 +15,7 @@ ru-RU:
     ext_static_content_visible: "Публиковать"
     ext_static_content_confirm_delete: "Вы уверены, что хотите удалить страницу?"
     ext_static_content_link: "Ссылка"
+    ext_static_content_meta_title: "Мета заголовок"
     ext_static_content_meta_keywords: "Ключевые слова"
     ext_static_content_meta_description: "Описание"
-
+    ext_static_content_layout: "Макет"
