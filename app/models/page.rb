@@ -6,6 +6,8 @@ class Page < ActiveRecord::Base
   
   named_scope :header_links, :conditions => ["show_in_header = ?", true], :order => 'position'
   named_scope :footer_links, :conditions => ["show_in_footer = ?", true], :order => 'position'
+  named_scope :sidebar_links,:conditions => ["show_in_sidebar = ?", true], :order => 'position'
+  
   named_scope :visible, :conditions => {:visible => true}
 
   def initialize(*args)
