@@ -15,3 +15,8 @@ nl-NL:
     ext_static_content_visible: Zichtbaar?
     ext_static_content_confirm_delete: Weet u zeker dat u deze pagina wilt verwijderen ?
     ext_static_content_link: Link
+    ext_static_content_meta_title: Meta Titel
+    ext_static_content_meta_keywords: Meta Keywords
+    ext_static_content_meta_description: Meta Description
+    ext_static_content_layout: Layout
+    ext_static_content_show_in_sidebar: Toon in zijbalk?
