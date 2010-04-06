@@ -1,0 +1,17 @@
+---
+nl-NL:
+    pages: Statische pagina's
+    ext_static_content_static_pages: Statische pagina's
+    ext_static_content_static_pages_desc: Beheer statische pagina's met een WYSIWYG editor.
+    ext_static_content_title: Titel
+    ext_static_content_slug: Slug
+    ext_static_content_body: Body
+    ext_static_content_new_page: Nieuwe pagina
+    ext_static_content_editing_page: Pagina bewerken
+    ext_static_content_foreign_link: Externe link (URL)
+    ext_static_content_show_in_header: Toon in header
+    ext_static_content_show_in_footer: Toon in footer
+    ext_static_content_position: Positie
+    ext_static_content_visible: Zichtbaar?
+    ext_static_content_confirm_delete: Weet u zeker dat u deze pagina wilt verwijderen ?
+    ext_static_content_link: Link
