@@ -9,6 +9,7 @@ en-GB:
     ext_static_content_new_page: New page
     ext_static_content_editing_page: Editing page
     ext_static_content_foreign_link: Foreign link (URL)
+    ext_static_content_show_in_sidebar: Show in sidebar
     ext_static_content_show_in_header: Show in header
     ext_static_content_show_in_footer: Show in footer
     ext_static_content_position: Position
