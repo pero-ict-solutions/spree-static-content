@@ -1,0 +1,22 @@
+---
+de-CH:
+    pages: Seiten
+    ext_static_content_static_pages: Statische Seiten
+    ext_static_content_static_pages_desc: Manage static page with WYSIWYG editor.
+    ext_static_content_title: Titel
+    ext_static_content_slug: Slug
+    ext_static_content_body: Body
+    ext_static_content_new_page: Neue Seite
+    ext_static_content_editing_page: Seite bearbeiten
+    ext_static_content_foreign_link: Externer Link (URL)
+    ext_static_content_show_in_sidebar: In der Sidebar anzeigen
+    ext_static_content_show_in_header: Im Header anzeigen
+    ext_static_content_show_in_footer: Im Footer anzeigen
+    ext_static_content_position: Position
+    ext_static_content_visible: Sichtbar
+    ext_static_content_confirm_delete: Bist du sicher?
+    ext_static_content_link: Link
+    ext_static_content_meta_title: Meta-Titel
+    ext_static_content_meta_keywords: Meta-Schl&uuml;sselw&ouml;rter
+    ext_static_content_meta_description: Meta-Beschreibung
+    ext_static_content_layout: Layout
