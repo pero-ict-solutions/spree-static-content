@@ -1,20 +1,26 @@
 <%= render :partial => 'admin/shared/configuration_menu' %>
 
+<div class='toolbar'>
+  <ul class='actions'>
+    <li id="new_product_link">
+      <%= button_link_to t("ext_static_content_new_page"), new_object_url, {:icon => 'add'} %>
+    </li>
+  </ul>
+  <br class='clear' />
+</div>
+
 <h1><%=t("ext_static_content_static_pages") %></h1>
 
-<table class="admin-report" width="545">
-	<thead>
-		<tr>
-      		<th><%=t("ext_static_content_title")%></th>
-      		<th><%=t("ext_static_content_link")%></th>
-      		<th><%=t("ext_static_content_visible")%></th>
-      		<th><%=t("action")%></th>
-    	</tr>
-  	</thead>
-	
+<table class="index">
+	<tr>
+		<th><%=t("ext_static_content_title")%></th>
+		<th><%=t("ext_static_content_link")%></th>
+		<th><%=t("ext_static_content_visible")%></th>
+		<th><%=t("action")%></th>
+  </tr>
 	<tbody>
     	<% @pages.each do |page| %>
-		<tr class="<%= cycle('even', 'odd') %>">
+		<tr class="<%= cycle('even', 'odd') %>" id="<%= dom_id page %>">
 			<td>
 				<%= page.title %>
 			</td>
@@ -25,12 +31,10 @@
 			  <%= page.visible %>
 			</td>
 			<td>
-	          <%=link_to t("edit"), edit_object_url(page) %> |
-	          <%=link_to t("delete"), object_url(page), :method => :delete, :confirm=> t("ext_static_content_confirm_delete") %>
-	        </td>
+        <%= link_to_edit page %> &nbsp;
+        <%= link_to_delete page %>
+	    </td>
 		</tr>
 		<% end %>
 	</tbody>
 </table>
-
-<%= link_to t("ext_static_content_new_page"), new_object_url %>

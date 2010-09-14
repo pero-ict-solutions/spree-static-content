@@ -1,11 +1,12 @@
 <%= render :partial => 'admin/shared/configuration_menu' %>
 
 <h1><%= t("ext_static_content_editing_page") %></h1>
-<%= error_messages_for :page %>
+<%= render "shared/error_messages", :target => @page %>
 
 <% form_for(:page, :url => object_url, :html => { :method => :put }) do |f| -%>
   <%= render :partial => "form", :locals => { :f => f } %>
-  <p>
-    <%=submit_tag t("update"), {"class" => "wymupdate"}%> <%= t("or") %> <%= link_to t("cancel"), admin_pages_path%>
+  <p class="form-buttons">
+    <%= button t("actions.update"), nil, 'submit', {"class" => "wymupdate"} %>
+    <%= t("or") %> <%= link_to t("actions.cancel"), collection_url %>
   </p>
 <% end %>

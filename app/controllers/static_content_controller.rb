@@ -15,5 +15,11 @@ class StaticContentController < Spree::BaseController
       render :file => "#{RAILS_ROOT}/public/404.html", :layout => false, :status => 404
     end
   end
+  
+  private
+  
+  def accurate_title
+    @page ? @page.title : nil
+  end
 end
 

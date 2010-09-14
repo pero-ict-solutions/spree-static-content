@@ -4,11 +4,11 @@ class Page < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of [:slug, :body], :if => :not_using_foreign_link?
   
-  named_scope :header_links, :conditions => ["show_in_header = ?", true], :order => 'position'
-  named_scope :footer_links, :conditions => ["show_in_footer = ?", true], :order => 'position'
-  named_scope :sidebar_links,:conditions => ["show_in_sidebar = ?", true], :order => 'position'
+  scope :header_links, where(["show_in_header = ?", true])
+  scope :footer_links, where(["show_in_footer = ?", true])
+  scope :sidebar_links, where(["show_in_sidebar = ?", true])
   
-  named_scope :visible, :conditions => {:visible => true}
+  scope :visible, where(:visible => true)
 
   def initialize(*args)
     super(*args)

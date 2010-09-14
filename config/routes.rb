@@ -1,7 +1,9 @@
-# Put your extension routes here.
+Rails.application.routes.draw do
 
-map.namespace :admin do |admin|
-  admin.resources :pages
+  namespace :admin do
+    resources :pages
+  end
+
+  match '/static/*path', :to => 'static_content#show', :via => :get, :as => 'static'
+
 end
-
-map.static '/static/*path', :controller => 'static_content', :action => 'show'

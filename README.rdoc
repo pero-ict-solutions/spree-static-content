@@ -25,19 +25,9 @@ extension to change the layout of the static pages.
     <% end %>
   </ul>
 
-== Installation and filter chain workaround:
-Suggest you load this extension after the localization extension (you get the localization extension for free in spree core)
-and before your remaining extensions as the static content extension specifies a filter in Spree::BaseController that may not get inherited by its
-controller subclasses if other extensions modify these controller subclasses first.
+== Installation
 
-We load the localization extension first to prevent its filter from being omitted from the filter chain.
-
-Hope to resolve this workaround in the near future, see bug here for more info: 
-http://railsdog.lighthouseapp.com/projects/31096-spree/tickets/653-specifying-filters-in-extensions-can-create-filter-chains-missing-filters
-
-Add this to your environment.rb inside the
-
-"Spree::Initializer.run do |config|" block:
-
-===
-  config.extensions = [:localization, :static_content, :all]
+1. Add `gem "spree_static_content"` to your Gemfile
+1. Run `bundle install`
+1. Run `rails g spree_static_content:install`
+1. Run `rake db:migrate`

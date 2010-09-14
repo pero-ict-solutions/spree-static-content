@@ -1,5 +1,5 @@
 ---
-en-US:
+en:
     pages: Pages
     ext_static_content_static_pages: Static pages
     ext_static_content_static_pages_desc: Manage static page with WYSIWYG editor.

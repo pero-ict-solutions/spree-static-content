@@ -1,33 +1,37 @@
-# I think this is the one that should be moved to the extension Rakefile template
-
-# In rails 1.2, plugins aren't available in the path until they're loaded.
-# Check to see if the rspec plugin is installed first and require
-# it if it is.  If not, use the gem version.
-
-# Determine where the RSpec plugin is by loading the boot
-unless defined? SPREE_ROOT
-  ENV["RAILS_ENV"] = "test"
-  case
-  when ENV["SPREE_ENV_FILE"]
-    require File.dirname(ENV["SPREE_ENV_FILE"]) + "/boot"
-  when File.dirname(__FILE__) =~ %r{vendor/SPREE/vendor/extensions}
-    require "#{File.expand_path(File.dirname(__FILE__) + "/../../../../../")}/config/boot"
-  else
-    require "#{File.expand_path(File.dirname(__FILE__) + "/../../../")}/config/boot"
-  end
+# encoding: utf-8
+require 'rubygems'
+begin
+  require 'jeweler'
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install jeweler"
+  exit 1
 end
-
+#gem 'rdoc', '= 2.2'
+require 'rdoc'
 require 'rake'
-require 'rake/rdoctask'
 require 'rake/testtask'
+require 'rake/rdoctask'
+require 'rake/packagetask'
+require 'rake/gempackagetask'
 
-rspec_base = File.expand_path(SPREE_ROOT + '/vendor/plugins/rspec/lib')
-$LOAD_PATH.unshift(rspec_base) if File.exist?(rspec_base)
+Jeweler::Tasks.new do |s|
+  s.name = "spree_static_content"
+  s.summary = "Extention to manage the static pages for your Spree shop."
+  s.description = s.summary
+  #s.email = ""
+  s.homepage = "http://github.com/spree/spree-static-content"
+  s.authors = ["Peter Berkenbosch", "Roman Smirnov"]
+  s.add_dependency 'spree_core', ['>= 0.30.0.beta1']
+  #s.has_rdoc = false
+  #s.extra_rdoc_files = [ "README.rdoc"]
+  #s.rdoc_options = ["--main", "README.rdoc", "--inline-source", "--line-numbers"]
+  #s.test_files = Dir['test/**/*.{yml,rb}']
+end
+Jeweler::GemcutterTasks.new
+
+
 require 'spec/rake/spectask'
 # require 'spec/translator'
-
-# Cleanup the SPREE_ROOT constant so specs will load the environment
-Object.send(:remove_const, :SPREE_ROOT)
 
 extension_root = File.expand_path(File.dirname(__FILE__))
 
@@ -83,19 +87,6 @@ namespace :spec do
     ::CodeStatistics::TEST_TYPES << "Controller specs"
     ::CodeStatistics::TEST_TYPES << "Helper specs"
     ::STATS_DIRECTORIES.delete_if {|a| a[0] =~ /test/}
-  end
-
-  namespace :db do
-    namespace :fixtures do
-      desc "Load fixtures (from spec/fixtures) into the current environment's database.  Load specific fixtures using FIXTURES=x,y"
-      task :load => :environment do
-        require 'active_record/fixtures'
-        ActiveRecord::Base.establish_connection(RAILS_ENV.to_sym)
-        (ENV['FIXTURES'] ? ENV['FIXTURES'].split(/,/) : Dir.glob(File.join(RAILS_ROOT, 'spec', 'fixtures', '*.{yml,csv}'))).each do |fixture_file|
-          Fixtures.create_fixtures('spec/fixtures', File.basename(fixture_file, '.*'))
-        end
-      end
-    end
   end
 end
 
