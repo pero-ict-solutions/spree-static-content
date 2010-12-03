@@ -7,8 +7,9 @@ class Page < ActiveRecord::Base
   scope :header_links, where(["show_in_header = ?", true])
   scope :footer_links, where(["show_in_footer = ?", true])
   scope :sidebar_links, where(["show_in_sidebar = ?", true])
-  
   scope :visible, where(:visible => true)
+  
+  before_save :update_positions_and_slug
 
   def initialize(*args)
     super(*args)
@@ -16,7 +17,13 @@ class Page < ActiveRecord::Base
     self.position = last_page ? last_page.position + 1 : 0
   end
 
-  def before_save
+  def link
+    foreign_link.blank? ? slug_link : foreign_link
+  end
+
+private
+
+  def update_positions_and_slug
     unless new_record?
       return unless prev_position = Page.find(self.id).position
       if prev_position > self.position
@@ -25,16 +32,10 @@ class Page < ActiveRecord::Base
         Page.update_all("position = position - 1", ["? < position AND position <= ?", prev_position,  self.position])
       end
     end
-    
-    self.slug = slug_link
-    
-  end
 
-  def link
-    foreign_link.blank? ? slug_link : foreign_link
+    self.slug = slug_link  
   end
-
-private  
+  
   def not_using_foreign_link?
     foreign_link.blank?
   end
