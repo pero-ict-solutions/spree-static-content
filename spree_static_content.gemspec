@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{spree_static_content}
-  s.version = "0.30.0"
+  s.version = "0.40.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Berkenbosch", "Roman Smirnov"]
-  s.date = %q{2010-12-03}
+  s.date = %q{2011-01-20}
   s.description = %q{Extention to manage the static pages for your Spree shop.}
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
      "config/locales/nl-NL.yml",
      "config/locales/pl.yml",
      "config/locales/pt-BR.yml",
-     "config/locales/ru-RU.yml",
+     "config/locales/ru.yml",
      "config/routes.rb",
      "lib/generators/spree_static_content/install_generator.rb",
      "lib/generators/templates/db/migrate/20081216193152_create_pages.rb",
@@ -47,68 +47,6 @@ Gem::Specification.new do |s|
      "lib/generators/templates/db/migrate/20091219021134_add_meta_fields_to_pages.rb",
      "lib/generators/templates/db/migrate/20100204105222_add_layout_to_pages.rb",
      "lib/generators/templates/db/migrate/20100323085528_add_show_in_sidebar_option_to_pages.rb",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-blockquote.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-h1.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-h2.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-h3.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-h4.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-h5.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-h6.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-p.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/lbl-pre.png",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/wymiframe.css",
-     "lib/generators/templates/public/javascripts/wymeditor/iframe/default/wymiframe.html",
-     "lib/generators/templates/public/javascripts/wymeditor/jquery.wymeditor.js",
-     "lib/generators/templates/public/javascripts/wymeditor/jquery.wymeditor.pack.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/ca.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/cs.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/de.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/en.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/es.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/fa.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/fr.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/he.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/hu.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/it.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/nb.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/nl.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/nn.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/pl.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/pt-br.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/pt.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/ru.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/sv.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/tr.js",
-     "lib/generators/templates/public/javascripts/wymeditor/lang/zh_cn.js",
-     "lib/generators/templates/public/javascripts/wymeditor/plugins/hovertools/jquery.wymeditor.hovertools.js",
-     "lib/generators/templates/public/javascripts/wymeditor/plugins/resizable/jquery.wymeditor.resizable.js",
-     "lib/generators/templates/public/javascripts/wymeditor/plugins/resizable/readme.txt",
-     "lib/generators/templates/public/javascripts/wymeditor/plugins/tidy/README",
-     "lib/generators/templates/public/javascripts/wymeditor/plugins/tidy/jquery.wymeditor.tidy.js",
-     "lib/generators/templates/public/javascripts/wymeditor/plugins/tidy/tidy.php",
-     "lib/generators/templates/public/javascripts/wymeditor/plugins/tidy/wand.png",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/default/icons.png",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/default/skin.css",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/default/skin.js",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/minimal/images/bg.header.gif",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/minimal/images/bg.selector.silver.gif",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/minimal/images/bg.wymeditor.png",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/minimal/images/icons.silver.gif",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/minimal/skin.css",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/minimal/skin.js",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/silver/COPYING",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/silver/README",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/silver/images/bg.header.gif",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/silver/images/bg.selector.silver.gif",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/silver/images/bg.wymeditor.png",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/silver/images/icons.silver.gif",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/silver/skin.css",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/silver/skin.js",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/twopanels/icons.png",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/twopanels/skin.css",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/twopanels/skin.js",
-     "lib/generators/templates/public/javascripts/wymeditor/skins/wymeditor_icon.png",
-     "lib/generators/templates/public/stylesheets/static.css",
      "lib/spree_static_content.rb",
      "lib/spree_static_content_hooks.rb",
      "spec/controllers/admin/pages_controller_spec.rb",
@@ -135,12 +73,15 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<spree_core>, [">= 0.30.0.beta1"])
+      s.add_runtime_dependency(%q<spree_core>, [">= 0.30.0"])
+      s.add_runtime_dependency(%q<spree_editor>, [">= 0"])
     else
-      s.add_dependency(%q<spree_core>, [">= 0.30.0.beta1"])
+      s.add_dependency(%q<spree_core>, [">= 0.30.0"])
+      s.add_dependency(%q<spree_editor>, [">= 0"])
     end
   else
-    s.add_dependency(%q<spree_core>, [">= 0.30.0.beta1"])
+    s.add_dependency(%q<spree_core>, [">= 0.30.0"])
+    s.add_dependency(%q<spree_editor>, [">= 0"])
   end
 end
 

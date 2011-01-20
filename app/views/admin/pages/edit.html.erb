@@ -6,7 +6,7 @@
 <% form_for(:page, :url => object_url, :html => { :method => :put }) do |f| -%>
   <%= render :partial => "form", :locals => { :f => f } %>
   <p class="form-buttons">
-    <%= button t("actions.update"), nil, 'submit', {"class" => "wymupdate"} %>
+    <%= button t("actions.update"), nil, 'submit' %>
     <%= t("or") %> <%= link_to t("actions.cancel"), collection_url %>
   </p>
 <% end %>
