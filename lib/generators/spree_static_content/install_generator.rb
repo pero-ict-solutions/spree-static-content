@@ -9,10 +9,6 @@ module SpreeStaticContent
         directory "db"
       end
 
-      def copy_public
-        directory "public"
-      end
-
     end
   end
 end
