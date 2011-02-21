@@ -1,0 +1,22 @@
+---
+fr-FR:
+    pages: Pages
+    ext_static_content_static_pages: Pages statiques
+    ext_static_content_static_pages_desc: "Gérer les pages statiques avec l'éditeur WYSIWYG."
+    ext_static_content_title: Titre
+    ext_static_content_slug: Slug
+    ext_static_content_body: Corps
+    ext_static_content_new_page: Nouvelle page
+    ext_static_content_editing_page: Edition de la page
+    ext_static_content_foreign_link: Lien extérieur (URL)
+    ext_static_content_show_in_sidebar: Visible dans la sidebar
+    ext_static_content_show_in_header: Visible en entête
+    ext_static_content_show_in_footer: Visible en pied de page
+    ext_static_content_position: Position
+    ext_static_content_visible: Visible
+    ext_static_content_confirm_delete: êtes-vous sûr ?
+    ext_static_content_link: Lien
+    ext_static_content_meta_title: Meta Titre
+    ext_static_content_meta_keywords: Meta Mots-clés
+    ext_static_content_meta_description: Meta Description
+    ext_static_content_layout: Layout
