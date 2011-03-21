@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{spree_static_content}
-  s.version = "0.40.0"
+  s.version = "0.40.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Berkenbosch", "Roman Smirnov"]
-  s.date = %q{2011-01-20}
+  s.date = %q{2011-03-21}
   s.description = %q{Extention to manage the static pages for your Spree shop.}
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "Versionfile",
      "app/controllers/admin/pages_controller.rb",
      "app/controllers/spree/base_controller_decorator.rb",
      "app/controllers/static_content_controller.rb",
@@ -29,9 +30,12 @@ Gem::Specification.new do |s|
      "app/views/admin/pages/index.html.erb",
      "app/views/admin/pages/new.html.erb",
      "app/views/static_content/show.html.erb",
+     "config/locales/de-CH.yml",
+     "config/locales/en-AU.yml",
      "config/locales/en-GB.yml",
      "config/locales/en.yml",
      "config/locales/es-ES.yml",
+     "config/locales/fr-FR.yml",
      "config/locales/nl-BE.yml",
      "config/locales/nl-NL.yml",
      "config/locales/pl.yml",
