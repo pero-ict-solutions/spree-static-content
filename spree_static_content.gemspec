@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{spree_static_content}
-  s.version = "0.40.1"
+  s.version = "0.40.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Berkenbosch", "Roman Smirnov"]
-  s.date = %q{2011-03-21}
+  s.date = %q{2011-04-04}
   s.description = %q{Extention to manage the static pages for your Spree shop.}
   s.extra_rdoc_files = [
     "README.rdoc"
