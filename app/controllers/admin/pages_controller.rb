@@ -6,7 +6,7 @@ class Admin::PagesController < Admin::BaseController
   end
   
   update.after do
-    expire_page :controller => 'static_content', :action => 'show', :path => @page.slug
+    expire_page :controller => '/static_content', :action => 'show', :path => @page.slug
     Rails.cache.delete('page_not_exist/'+@page.slug)
   end
   
