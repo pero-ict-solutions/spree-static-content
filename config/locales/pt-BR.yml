@@ -1,14 +1,15 @@
 ---
 pt-BR:
-    pages: Páginas
-    ext_static_content_static_pages: Páginas estáticas
-    ext_static_content_static_pages_desc: Administrar página estática com editor visual (WYSIWYG).
-    ext_static_content_title: Título
-    ext_static_content_slug: Slug
-    ext_static_content_body: Corpo
-    ext_static_content_new_page: Nova página
-    ext_static_content_editing_page: Editando página
-    ext_static_content_foreign_link: Link externo (URL)
-    ext_static_content_show_in_header: Mostrar no cabeçalho
-    ext_static_content_show_in_footer: Mostrar no rodapé
-    ext_static_content_position: Posição
+  pages: Páginas
+  static_content:
+    static_pages: Páginas estáticas
+    static_pages_desc: Administrar página estática com editor visual (WYSIWYG).
+    title: Título
+    slug: Slug
+    body: Corpo
+    new_page: Nova página
+    editing_page: Editando página
+    foreign_link: Link externo (URL)
+    show_in_header: Mostrar no cabeçalho
+    show_in_footer: Mostrar no rodapé
+    position: Posição

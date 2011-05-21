@@ -1,22 +1,35 @@
 ---
 ru:
-    pages: "Страницы"
-    ext_static_content_static_pages: "Статические страницы"
-    ext_static_content_static_pages_desc: "Управление статическими страницами"
-    ext_static_content_title: "Заголовок"
-    ext_static_content_slug: "Постоянная ссылка"
-    ext_static_content_body: "Основной текст"
-    ext_static_content_new_page: "Новая страница"
-    ext_static_content_editing_page: "Редактирование страницы"
-    ext_static_content_foreign_link: "Внешняя ссылка (URL)"
-    ext_static_content_show_in_header: "Отображать в верхнем меню"
-    ext_static_content_show_in_footer: "Отображать в нижнем меню"
-    ext_static_content_show_in_sidebar: "Отображать в боковом меню"
-    ext_static_content_position: "Позиция в меню"
-    ext_static_content_visible: "Публиковать"
-    ext_static_content_confirm_delete: "Вы уверены, что хотите удалить страницу?"
-    ext_static_content_link: "Ссылка"
-    ext_static_content_meta_title: "Мета заголовок"
-    ext_static_content_meta_keywords: "Ключевые слова"
-    ext_static_content_meta_description: "Описание"
-    ext_static_content_layout: "Макет"
+  activerecord:
+    attributes:
+      page:
+        title: Заголовок
+        slug: Постоянная ссылка
+        body: Основной текст
+    models:
+      page:
+        one: Страница
+        few: Страницы
+        many: Страниц
+
+  pages: "Страницы"
+  static_content:
+    static_pages: "Статические страницы"
+    static_pages_desc: "Управление статическими страницами"
+    title: "Заголовок"
+    slug: "Постоянная ссылка"
+    body: "Основной текст"
+    new_page: "Новая страница"
+    editing_page: "Редактирование страницы"
+    foreign_link: "Внешняя ссылка (URL)"
+    show_in_header: "Отображать в верхнем меню"
+    show_in_footer: "Отображать в нижнем меню"
+    show_in_sidebar: "Отображать в боковом меню"
+    position: "Позиция в меню"
+    visible: "Публиковать"
+    confirm_delete: "Вы уверены, что хотите удалить страницу?"
+    link: "Ссылка"
+    meta_title: "Мета заголовок"
+    meta_keywords: "Ключевые слова"
+    meta_description: "Описание"
+    layout: "Макет"
