@@ -1,52 +1,16 @@
-<table class="admin-report" width="545">
-  <tr>
-    <td valign="top"><%=t("static_content.title")%>:</td>
-    <td><%= f.text_field :title, {"style" => "width:500px"} %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.slug")%>:</td>
-    <td><%= f.text_field :slug, {"style" => "width:500px"} %></td>
-  </tr>
-  <tr>
-    <td valign="top" colspan="2">
-      <%=t("static_content.body")%>:<br />
-      <%= f.text_area :body, {"style" => "width:100%"} %> 
-    </td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.foreign_link")%>:</td>
-    <td><%= f.text_field :foreign_link, {"style" => "width:500px"} %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.meta_keywords")%>:</td>
-    <td><%= f.text_field :meta_keywords, {"style" => "width:500px"} %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.meta_description")%>:</td>
-    <td><%= f.text_field :meta_description, {"style" => "width:500px"} %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.show_in_sidebar")%>:</td>
-    <td><%= f.check_box :show_in_sidebar %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.show_in_header")%>:</td>
-    <td><%= f.check_box :show_in_header %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.show_in_footer")%>:</td>
-    <td><%= f.check_box :show_in_footer %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.position")%>:</td>
-    <td><%= f.text_field :position %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.layout")%>:</td>
-    <td><%= f.text_field :layout %></td>
-  </tr>
-  <tr>
-    <td valign="top"><%=t("static_content.visible")%>:</td>
-    <td><%= f.check_box :visible %></td>
-  </tr>
-</table>
+<%= stylesheet_link_tag 'formtastic', 'formtastic_changes' %>
+
+<%= f.inputs do %>
+  <%= f.input :title %>
+  <%= f.input :slug %>
+  <%= f.input :body %>
+  <%= f.input :foreign_link %>
+  <%= f.input :meta_keywords %>
+  <%= f.input :meta_description %>
+  <%= f.input :show_in_sidebar %>
+  <%= f.input :show_in_header %>
+  <%= f.input :show_in_footer %>
+  <%= f.input :position %>
+  <%= f.input :layout %>
+  <%= f.input :visible %>
+<% end %>

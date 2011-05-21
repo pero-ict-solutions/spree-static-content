@@ -8,6 +8,10 @@ module SpreeStaticContent
       def copy_migrations
         directory "db"
       end
+      
+      def copy_public
+        directory "public"
+      end
 
     end
   end

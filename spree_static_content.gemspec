@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{spree_static_content}
-  s.version = "0.40.2"
+  s.version = "0.60.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Berkenbosch", "Roman Smirnov"]
-  s.date = %q{2011-04-04}
+  s.date = %q{2011-05-21}
   s.description = %q{Extention to manage the static pages for your Spree shop.}
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -77,15 +77,18 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<spree_core>, [">= 0.30.0"])
+      s.add_runtime_dependency(%q<spree_core>, [">= 0.60.0"])
       s.add_runtime_dependency(%q<spree_editor>, [">= 0"])
+      s.add_runtime_dependency(%q<formtastic>, ["~> 1.2.3"])
     else
-      s.add_dependency(%q<spree_core>, [">= 0.30.0"])
+      s.add_dependency(%q<spree_core>, [">= 0.60.0"])
       s.add_dependency(%q<spree_editor>, [">= 0"])
+      s.add_dependency(%q<formtastic>, ["~> 1.2.3"])
     end
   else
-    s.add_dependency(%q<spree_core>, [">= 0.30.0"])
+    s.add_dependency(%q<spree_core>, [">= 0.60.0"])
     s.add_dependency(%q<spree_editor>, [">= 0"])
+    s.add_dependency(%q<formtastic>, ["~> 1.2.3"])
   end
 end
 

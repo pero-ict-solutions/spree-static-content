@@ -6,30 +6,28 @@ ru:
         title: Заголовок
         slug: Постоянная ссылка
         body: Основной текст
+        foreign_link: "Внешняя ссылка (URL)"
+        show_in_header: "Отображать в верхнем меню"
+        show_in_footer: "Отображать в нижнем меню"
+        show_in_sidebar: "Отображать в боковом меню"
+        position: "Позиция в меню"
+        visible: "Публиковать"
+        meta_keywords: "Ключевые слова"
+        meta_description: "Описание"
+        layout: "Макет"
     models:
       page:
         one: Страница
         few: Страницы
         many: Страниц
 
+  page: "Страница"
   pages: "Страницы"
   static_content:
     static_pages: "Статические страницы"
     static_pages_desc: "Управление статическими страницами"
-    title: "Заголовок"
-    slug: "Постоянная ссылка"
-    body: "Основной текст"
     new_page: "Новая страница"
     editing_page: "Редактирование страницы"
-    foreign_link: "Внешняя ссылка (URL)"
-    show_in_header: "Отображать в верхнем меню"
-    show_in_footer: "Отображать в нижнем меню"
-    show_in_sidebar: "Отображать в боковом меню"
-    position: "Позиция в меню"
-    visible: "Публиковать"
     confirm_delete: "Вы уверены, что хотите удалить страницу?"
     link: "Ссылка"
     meta_title: "Мета заголовок"
-    meta_keywords: "Ключевые слова"
-    meta_description: "Описание"
-    layout: "Макет"

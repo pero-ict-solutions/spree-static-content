@@ -11,10 +11,10 @@
 
 <table class="index">
 	<tr>
-		<th><%=t("static_content.title")%></th>
-		<th><%=t("static_content.link")%></th>
-		<th><%=t("static_content.visible")%></th>
-		<th><%=t("action")%></th>
+		<th><%= Page.human_attribute_name(:title) %></th>
+		<th><%= t("static_content.link") %></th>
+		<th><%= Page.human_attribute_name(:visible) %></th>
+		<th><%= t("action") %></th>
   </tr>
 	<tbody>
     	<% @pages.each do |page| %>
@@ -26,7 +26,7 @@
 				<%= link_to page.link, page.link %>
 			</td>
 			<td>
-			  <%= page.visible %>
+			  <%= icon('tick') if page.visible %>
 			</td>
 			<td>
         <%= link_to_edit page %> &nbsp;

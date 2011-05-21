@@ -1,10 +1,10 @@
 <h1><%= t("static_content.editing_page") %></h1>
 <%= render "shared/error_messages", :target => @page %>
 
-<% form_for(:page, :url => object_url, :html => { :method => :put }) do |f| -%>
+<% semantic_form_for([:admin, @page]) do |f| -%>
   <%= render :partial => "form", :locals => { :f => f } %>
   <p class="form-buttons">
     <%= button t("actions.update"), nil, 'submit' %>
-    <%= t("or") %> <%= link_to t("actions.cancel"), collection_url %>
+    <%= t("or") %> <%= link_to t("actions.cancel"), admin_pages_path %>
   </p>
 <% end %>

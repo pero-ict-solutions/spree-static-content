@@ -1,0 +1,14 @@
+form.formtastic fieldset > ol > li label { float: none; width: auto; }
+form.formtastic fieldset > ol > li.boolean label { padding-left: 0; }
+form.formtastic input[type=text] { padding: 5px; }
+form.formtastic .numeric input[type=text] { width: 5em; }
+form.formtastic fieldset > ol > li p.inline-errors { margin-left: 0 }
+form.formtastic .required label { color: black; }
+form.formtastic .required label abbr { color: red; padding-left: 3px; }
+form.formtastic li.error {
+  background-color: #FDE4E4;
+  background-image: url(/images/admin/bg/red-stripes.png);
+}
+form.formtastic fieldset > ol > li {
+  padding-left: 1em;
+}
