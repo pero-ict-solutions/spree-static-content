@@ -1,5 +1,6 @@
-class SpreeStaticContentHooks < Spree::ThemeSupport::HookListener
-  insert_after :admin_tabs do
-    %(<%=  tab(:pages)  %>)
-  end
-end
+Deface::Override.new(:virtual_path => "layouts/admin",
+                     :name => "static_content_admin_tab",
+                     :insert_bottom => "[data-hook='admin_tabs']",
+                     :text => "<%= tab(:pages) %>",
+                     :disabled => false)
+
