@@ -23,7 +23,7 @@ Jeweler::Tasks.new do |s|
   s.authors = ["Peter Berkenbosch", "Roman Smirnov"]
   s.add_dependency 'spree_core', ['>= 0.60.0']
   s.add_dependency 'spree_editor'
-  s.add_dependency 'formtastic', '~> 1.2.3'
+  s.add_dependency 'formtastic', '1.2.3'
   #s.has_rdoc = false
   #s.extra_rdoc_files = [ "README.rdoc"]
   #s.rdoc_options = ["--main", "README.rdoc", "--inline-source", "--line-numbers"]
