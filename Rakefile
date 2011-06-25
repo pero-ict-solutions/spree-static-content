@@ -21,9 +21,9 @@ Jeweler::Tasks.new do |s|
   #s.email = ""
   s.homepage = "http://github.com/spree/spree-static-content"
   s.authors = ["Peter Berkenbosch", "Roman Smirnov"]
-  s.add_dependency 'spree_core', ['>= 0.60.0']
-  s.add_dependency 'spree_editor'
-  s.add_dependency 'formtastic', '1.2.3'
+  s.add_dependency 'spree_core', '>= 0.60.0'
+  s.add_dependency 'spree_editor', '>= 0.50.0'
+  s.add_dependency 'formtastic', '~> 1.2.3'
   #s.has_rdoc = false
   #s.extra_rdoc_files = [ "README.rdoc"]
   #s.rdoc_options = ["--main", "README.rdoc", "--inline-source", "--line-numbers"]
