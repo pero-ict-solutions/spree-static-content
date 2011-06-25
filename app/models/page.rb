@@ -35,6 +35,7 @@ private
 
     self.slug = slug_link
     Rails.cache.delete('page_not_exist/' + self.slug)
+    return true
   end
   
   def not_using_foreign_link?
