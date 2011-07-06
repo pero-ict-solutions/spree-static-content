@@ -1,5 +1,6 @@
 require 'spree_core'
 require 'spree_static_content_hooks'
+require 'formtastic'
 
 module SpreeStaticContent
   class Engine < Rails::Engine
