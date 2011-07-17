@@ -12,14 +12,14 @@ class StaticContentController < Spree::BaseController
     end
 
     unless @page = Page.visible.find_by_slug(path)
-      render :file => "#{RAILS_ROOT}/public/404.html", :layout => false, :status => 404
+      render_404
     end
   end
   
   private
   
   def accurate_title
-    @page ? @page.title : nil
+    @page ? (@page.meta_title ? @page.meta_title : @page.title) : nil
   end
 end
 
