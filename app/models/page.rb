@@ -33,8 +33,10 @@ private
       end
     end
 
-    self.slug = slug_link
-    Rails.cache.delete('page_not_exist/' + self.slug)
+    if not_using_foreign_link?
+      self.slug = slug_link
+      Rails.cache.delete('page_not_exist/' + self.slug)
+    end
     return true
   end
   
