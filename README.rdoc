@@ -27,7 +27,7 @@ extension to change the layout of the static pages.
 
 == Installation
 
-1. Add `gem "spree_static_content"` and `gem "spree_editor", :git => "git://github.com/spree/spree_editor.git"` to your Gemfile
+1. Add `gem "spree_static_content"` and `gem "spree_editor", :git => "git://github.com/romul/spree_editor.git"` to your Gemfile
 1. Run `bundle install`
 1. Run `rails g spree_static_content:install`
 1. Run `rake db:migrate`
