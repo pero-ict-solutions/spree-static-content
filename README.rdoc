@@ -35,7 +35,5 @@ Add to Gemfile:
 Run
   bundle install
   rails g spree_static_content:install
-  rake db:migrate
   rake spree_editor:install
-  
 
