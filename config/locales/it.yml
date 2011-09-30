@@ -1,0 +1,32 @@
+---
+it:
+  activerecord:
+    attributes:
+      page:
+        title: Titolo
+        slug: Slug
+        body: Testo
+        foreign_link: Link esterno (URL)
+        show_in_sidebar: Mostra nella sidebar
+        show_in_header: Mostra nell'header
+        show_in_footer: Mostra nel footer
+        position: Posizione
+        visible: Visibile
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        layout: Layout
+    models:
+      page:
+        one: Pagina
+        many: Pagine
+
+  page: Pagina
+  pages: Pagine
+  static_content:
+    static_pages: Pagine statiche
+    static_pages_desc: Gestisce le pagine statiche con un editor WYSIWYG.
+    new_page: Nuova pagina
+    editing_page: Modifica pagina
+    confirm_delete: Sei sicuro?
+    link: Link
+    meta_title: Meta Title
