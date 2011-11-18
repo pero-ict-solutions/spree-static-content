@@ -1,0 +1,32 @@
+---
+et:
+  activerecord:
+    attributes:
+      page:
+        title: Pealkiri
+        slug: Püsiviide
+        body: Sisu
+        foreign_link: Väline link (URL)
+        show_in_sidebar: Kuva lehekülg küljeribal
+        show_in_header: Kuva lehekülj päises
+        show_in_footer: Kuva lehekülg jaluses
+        position: Positsioon
+        visible: Nähtav
+        meta_keywords: Meta võtmesõnad
+        meta_description: Meta kirjeldus
+        layout: Layout
+    models:
+      page:
+        one: Lehekülg
+        many: Leheküljed
+
+  page: Lehekülg
+  pages: Leheküljed
+  static_content:
+    static_pages: Leheküljed
+    static_pages_desc: Staatiliste lehekülgede haldamine WYSIWYG editori abil.
+    new_page: Uus lehekülg
+    editing_page: Muudan lehekülge
+    confirm_delete: Oled kindel?
+    link: Link
+    meta_title: Meta pealkiri
