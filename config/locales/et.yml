@@ -23,10 +23,10 @@ et:
   page: Lehekülg
   pages: Leheküljed
   static_content:
-    static_pages: Staatilised leheküljed
+    static_pages: Leheküljed
     static_pages_desc: Staatiliste lehekülgede haldamine WYSIWYG editori abil.
     new_page: Uus lehekülg
-    editing_page: Muudan lehekülje
+    editing_page: Muudan lehekülge
     confirm_delete: Oled kindel?
     link: Link
     meta_title: Meta pealkiri
