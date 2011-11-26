@@ -29,6 +29,8 @@ See the wiki for some more documentation on how you can use this extension.
 2. inside your fork run `bundle install`
 3. make sure the tests can run on your system run : `bundle exec rake test_app && bundle exec rspec spec`
 
+You can also run `bundle exec rake test_app` and then to run the specs run `bundle exec rake`
+
 ### Fix bugs or add functionality
 
 1. create a feature branch
