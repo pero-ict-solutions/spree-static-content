@@ -14,7 +14,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 #require 'spree/url_helpers'
 
 # Requires factories defined in spree_core
-require 'spree_core/testing_support/factories'
+require 'spree/core/testing_support/factories'
 
 RSpec.configure do |config|
   # == Mock Framework
@@ -33,8 +33,8 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
-  
+
   #config.include Spree::UrlHelpers
   #config.include Devise::TestHelpers, :type => :controller
-  
+
 end

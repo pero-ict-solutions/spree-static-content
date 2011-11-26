@@ -1,28 +1,21 @@
-require 'rake'
-require 'rake/testtask'
-require 'rake/packagetask'
-require 'rubygems/package_task'
+# encoding: utf-8
+require 'bundler'
+Bundler::GemHelper.install_tasks
+Bundler.setup
+
 require 'rspec/core/rake_task'
-#require 'cucumber/rake/task'
-require 'spree_core/testing_support/common_rake'
-
 RSpec::Core::RakeTask.new
-#Cucumber::Rake::Task.new
 
-# task :default => [:spec, :cucumber ]
-task :default => [:spec]
+require 'spree/core/testing_support/common_rake'
 
-spec = eval(File.read('spree_static_content.gemspec'))
+desc "Default Task"
+task :default => [ :spec ]
 
-Gem::PackageTask.new(spec) do |p|
-  p.gem_spec = spec
-end
-
-desc "Release to gemcutter"
-task :release => :package do
-  require 'rake/gemcutter'
-  Rake::Gemcutter::Tasks.new(spec).define
-  Rake::Task['gem:push'].invoke
+namespace :test_app do
+  desc 'Rebuild test and cucumber databases'
+  task :rebuild_dbs do
+    system("cd spec/test_app && rake db:drop db:migrate RAILS_ENV=test && rake db:drop db:migrate RAILS_ENV=cucumber")
+  end
 end
 
 desc "Generates a dummy app for testing"
