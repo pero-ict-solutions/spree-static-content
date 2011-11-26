@@ -14,7 +14,6 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency('spree_core', '>= 0.70.1')
-  s.add_dependency('spree_editor','>= 0.70.1')
   s.add_dependency('formtastic')
   s.add_development_dependency 'rspec-rails'
 end
