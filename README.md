@@ -18,7 +18,7 @@ See the wiki for some more documentation on how you can use this extension.
 
 1. Add the following to your Gemfile
 <pre>
-  gem 'spree_static_content', :git => 'github.com/spree/spree-static-content'
+  gem 'spree_static_content', :git => 'http://github.com/spree/spree_static_content'
 </pre>
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
