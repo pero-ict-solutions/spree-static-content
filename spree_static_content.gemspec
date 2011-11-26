@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{spree_static_content}
-  s.version = "0.60.2"
+  s.version = "0.70.beta"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Peter Berkenbosch}, %q{Roman Smirnov}]
