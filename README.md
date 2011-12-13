@@ -1,5 +1,8 @@
 # Spree Static Content
 
+[![Build
+Status](https://secure.travis-ci.org/spree/spree_static_content.png)](http://travis-ci.org/spree/spree_static_content)
+
 Good, clean content management of pages for Spree.  You can use this to:
 
 - Add and manage static pages such as an 'About' page.
