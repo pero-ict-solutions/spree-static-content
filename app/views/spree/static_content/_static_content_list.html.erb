@@ -1,1 +1,1 @@
-<li><%= link_to page.title, page.slug %></li>
+<li class=<%=(request.fullpath[1..-1] == page.slug) ? 'current' : 'not'%>><%= link_to page.title, page.slug %></li>
