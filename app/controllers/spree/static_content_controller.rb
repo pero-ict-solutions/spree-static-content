@@ -1,6 +1,7 @@
 class Spree::StaticContentController < Spree::BaseController
   caches_action :show
-
+  layout :determine_layout
+  
   def show
     path = case params[:path]
     when Array
@@ -17,6 +18,11 @@ class Spree::StaticContentController < Spree::BaseController
   end
 
   private
+  
+  def determine_layout
+    return @page.layout if @page and @page.layout.present?
+    'spree/layouts/spree_application'
+  end
 
   def accurate_title
     @page ? (@page.meta_title ? @page.meta_title : @page.title) : nil
