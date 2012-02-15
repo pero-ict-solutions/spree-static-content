@@ -1,10 +1,7 @@
-<h1><%= t("static_content.new_page") %></h1>
+<h1><%= t("static_content.editing_page") %></h1>
 <%= render "spree/shared/error_messages", :target => @page %>
 
-<%= semantic_form_for([:admin, @page]) do |f| %>
-  <%= render :partial => "form", :locals => { :f => f } %>
-  <p class="form-buttons">
-    <%= button t("actions.create"), nil, 'submit' %>
-    <%= t("or") %> <%= link_to t("actions.cancel"), admin_pages_path %>
-  </p>
+<%= form_for [:admin, @page], :method => :put, :html => { :multipart => true } do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
 <% end %>
