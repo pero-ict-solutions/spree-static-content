@@ -1,16 +1,12 @@
 <% content_for :head do -%>
-
   <%- if @page.meta_title.present? -%>
     <meta name="title" content="<%=@page.meta_title%>">
   <%- else -%>
     <meta name="title" content="<%=@page.title%>">
   <%- end -%>
-  
   <meta name="keywords" content="<%=@page.meta_keywords%>">
   <meta name="keywords" content="<%=@page.meta_description%>">
-
 <% end -%>
-
 
 <% content_for :sidebar do %>
   <% if "products" == @current_controller && @taxon %>
@@ -19,6 +15,7 @@
     <%= render :partial => "spree/shared/taxonomies" %>
   <% end %>
 <% end %>
+
 <h1><%= @page.title %></h1>
 <div id="page_content">
   <%= raw @page.body %>
