@@ -1,7 +1,6 @@
 # Spree Static Content
 
-[![Build
-Status](https://secure.travis-ci.org/spree/spree_static_content.png)](http://travis-ci.org/spree/spree_static_content)
+[![Build Status](https://secure.travis-ci.org/spree/spree_static_content.png?branch=1-0-stable)](http://travis-ci.org/spree/spree_static_content)
 
 Good, clean content management of pages for Spree.  You can use this to:
 
