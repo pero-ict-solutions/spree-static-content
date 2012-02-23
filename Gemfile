@@ -6,7 +6,6 @@ group :test do
   gem 'ffaker'
 end
 
-
 unless ENV["CI"]
   if RUBY_VERSION < "1.9"
     gem "ruby-debug"
