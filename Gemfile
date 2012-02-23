@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'spree'
+
 group :test do
   gem 'ffaker'
 end
