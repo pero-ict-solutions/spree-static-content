@@ -12,7 +12,7 @@ class Spree::StaticContentController < Spree::BaseController
       request.path
     end
 
-    unless @page = Spree::Page.visible.find_by_slug(path)
+    unless @page = Spree::Page.visible.find_by_slug(path.gsub('//','/'))
       render_404
     end
   end
