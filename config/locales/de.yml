@@ -1,0 +1,37 @@
+---
+de:
+  activerecord:
+    attributes:
+      page: &page_labels
+        title: Titel
+        slug: Slug
+        body: Inhalt
+        foreign_link: Externer Link (URL)
+        show_in_sidebar: In der 'Sidebar' anzeigen
+        show_in_header: Im 'Header' anzeigen
+        show_in_footer: Im 'Footer' anzeigen
+        position: Position
+        visible: Sichtbar
+        meta_keywords: Meta-Schlüsselwörter
+        meta_description: Meta-Beschreibung
+        meta_title: Meta-Titel
+        layout: Layout
+    models:
+      page:
+        one: Seite
+        many: Seiten
+
+  helpers:
+    label:
+      page:
+        <<: *page_labels
+
+  page: Seite
+  pages: Seiten
+  static_content:
+    static_pages: Statische Seiten
+    static_pages_desc: Verwaltung statischer Seiten mit einem WYSIWYG-Editor
+    new_page: Neue Seite
+    editing_page: Seite bearbeiten
+    confirm_delete: Sind Sie sicher?
+    link: Link
