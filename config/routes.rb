@@ -1,14 +1,21 @@
+module StaticPage
+  def self.remove_spree_mount_point(path)
+    regex = Regexp.new Rails.application.routes.named_routes[:spree].path.spec.to_s
+    path.sub( regex, '')
+  end
+end
+
 class Spree::StaticPage
   def self.matches?(request)
-    path = request.fullpath
-    count = Spree::Page.visible.where(:slug => path.gsub("//","/")).count
+    path = StaticPage::remove_spree_mount_point(request.fullpath)
+    count = Spree::Page.visible.where(:slug => path).count
     0 < count
   end
 end
 
 class Spree::StaticRoot
   def self.matches?(request)
-    path = request.fullpath.gsub("//","/")
+    path = StaticPage::remove_spree_mount_point(request.fullpath)
     (path == '/') && Spree::Page.visible.find_by_slug(path)
   end
 end
