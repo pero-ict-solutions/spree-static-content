@@ -1,6 +1,6 @@
 module StaticPage
   def self.remove_spree_mount_point(path)
-    regex = Regexp.new Rails.application.routes.named_routes[:spree].path.spec.to_s
+    regex = Regexp.new Rails.application.routes.named_routes[:spree].path
     path.sub( regex, '')
   end
 end

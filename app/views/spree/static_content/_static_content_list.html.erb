@@ -1,2 +1,2 @@
-<% page_uri = Rails.application.routes.named_routes[:spree].path.spec.to_s == '/' ? page.slug : Rails.application.routes.named_routes[:spree].path.spec.to_s + page.slug %>
+<% page_uri = Rails.application.routes.named_routes[:spree].path == '/' ? page.slug : Rails.application.routes.named_routes[:spree].path + page.slug %>
 <li class=<%=(request.fullpath == page_uri) ? 'current' : 'not'%>><%= link_to page.title, page_uri  %></li>
