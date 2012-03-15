@@ -1,5 +1,5 @@
 <% if page.foreign_link.present? %>
-  <li class='not'><%= link_to page.title, page.foreign_link  %></li>
+  <li class='not'><%= link_to page.title, page.foreign_link, {:target => "_blank"}  %></li>
 <% else %>
   <% page_uri = Rails.application.routes.named_routes[:spree].path == '/' ? page.slug : Rails.application.routes.named_routes[:spree].path + page.slug %>
   <li class=<%=(request.fullpath.gsub('//','/') == page_uri) ? 'current' : 'not'%>><%= link_to page.title, page_uri  %></li>
