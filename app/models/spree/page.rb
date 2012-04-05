@@ -9,11 +9,13 @@ class Spree::Page < ActiveRecord::Base
   scope :footer_links, where(:show_in_footer => true).visible
   scope :sidebar_links, where(:show_in_sidebar => true).visible
 
-
   before_save :update_positions_and_slug
+
+  attr_accessible :title, :slug, :body, :meta_title, :meta_keywords, :meta_description, :layout, :foreign_link, :position, :show_in_sidebar, :show_in_header, :show_in_footer, :visible
 
   def initialize(*args)
     super(*args)
+
     last_page = Spree::Page.last
     self.position = last_page ? last_page.position + 1 : 0
   end
