@@ -11,6 +11,6 @@ class Spree::Admin::PagesController < Spree::Admin::ResourceController
 
   private
   def expire_cache
-    expire_fragment "spree_static_content" + @object.slug
+    expire_fragment "spree_static_content" + @object.slug + "_spree_static_content"
   end
 end
