@@ -1,6 +1,6 @@
 # Spree Static Content
 
-[![Build Status](https://secure.travis-ci.org/spree/spree_static_content.png?branch=master)](http://travis-ci.org/spree/spree_static_content)
+[![Build Status](https://secure.travis-ci.org/spree/spree_static_content.png?branch=1-1-stable)](http://travis-ci.org/spree/spree_static_content)
 
 Good, clean content management of pages for Spree.  You can use this to:
 
@@ -18,11 +18,11 @@ See the wiki for some more documentation on how you can use this extension.
 
 ## Basic Installation
 
-**For Spree 1.0.x**
+**For Spree 1.1.x**
 
 1. Add the following to your Gemfile
 <pre>
-  gem 'spree_static_content', :git => 'git@github.com:spree/spree_static_content.git', :branch => '1-0-stable'
+  gem 'spree_static_content', :git => 'git@github.com:spree/spree_static_content.git', :branch => '1-1-stable'
 </pre>
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
