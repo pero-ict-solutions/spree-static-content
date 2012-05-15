@@ -21,3 +21,4 @@ nl-NL:
     meta_description: Meta Description
     layout: Layout
     show_in_sidebar: Toon in zijbalk?
+    page_navigation_title: "Pagina's"
