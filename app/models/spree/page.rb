@@ -13,6 +13,13 @@ class Spree::Page < ActiveRecord::Base
 
   attr_accessible :title, :slug, :body, :meta_title, :meta_keywords, :meta_description, :layout, :foreign_link, :position, :show_in_sidebar, :show_in_header, :show_in_footer, :visible
 
+  def self.by_slug(slug)
+    slug = StaticPage::remove_spree_mount_point(slug) unless Rails.application.routes.url_helpers.spree_path == "/"
+    pages = self.arel_table
+    query = pages[:slug].eq(slug).or(pages[:slug].eq("/#{slug}"))
+    self.where(query)
+  end
+
   def initialize(*args)
     super(*args)
 
@@ -21,7 +28,7 @@ class Spree::Page < ActiveRecord::Base
   end
 
   def link
-    foreign_link.blank? ? slug_link : foreign_link
+    foreign_link.blank? ? slug : foreign_link
   end
 
 private
@@ -37,7 +44,6 @@ private
     end
 
     if not_using_foreign_link?
-      self.slug = slug_link
       Rails.cache.delete('page_not_exist/' + self.slug)
     end
     return true
@@ -45,13 +51,5 @@ private
 
   def not_using_foreign_link?
     foreign_link.blank?
-  end
-
-  def slug_link
-    ensure_slash_prefix slug
-  end
-
-  def ensure_slash_prefix(str)
-    str.index('/') == 0 ? str : '/' + str
   end
 end
