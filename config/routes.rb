@@ -16,7 +16,7 @@ end
 class Spree::StaticRoot
   def self.matches?(request)
     path = StaticPage::remove_spree_mount_point(request.fullpath)
-    (path == '') && Spree::Page.visible.by_slug(path).first
+    path.nil? && Spree::Page.visible.by_slug(path.to_s).first
   end
 end
 
