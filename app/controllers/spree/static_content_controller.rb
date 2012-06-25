@@ -14,11 +14,8 @@ class Spree::StaticContentController < Spree::BaseController
     when nil
       request.path
     end
-    
-    path = path.gsub('//','/')
-    path = StaticPage::remove_spree_mount_point(path) unless Rails.application.routes.url_helpers.spree_path == "/"
-    
-    unless @page = Spree::Page.visible.find_by_slug(path)
+
+    unless @page = Spree::Page.visible.by_slug(path).first
       render_404
     end
   end

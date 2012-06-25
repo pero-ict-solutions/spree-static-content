@@ -7,16 +7,16 @@ end
 
 class Spree::StaticPage
   def self.matches?(request)
-    path = StaticPage::remove_spree_mount_point(request.fullpath)
-    count = Spree::Page.visible.where(:slug => path).count
-    0 < count
+    slug = StaticPage::remove_spree_mount_point(request.fullpath)
+    pages = Spree::Page.arel_table
+    Spree::Page.visible.by_slug(slug).exists?
   end
 end
 
 class Spree::StaticRoot
   def self.matches?(request)
     path = StaticPage::remove_spree_mount_point(request.fullpath)
-    (path == '/') && Spree::Page.visible.find_by_slug(path)
+    (path == '') && Spree::Page.visible.by_slug(path).first
   end
 end
 
