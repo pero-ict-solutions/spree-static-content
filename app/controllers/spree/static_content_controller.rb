@@ -25,7 +25,7 @@ class Spree::StaticContentController < Spree::BaseController
   private
 
   def determine_layout
-    return @page.layout if @page and @page.layout.present?
+    return @page.layout if @page and @page.layout.present? and not @page.render_layout_as_partial?
     'spree/layouts/spree_application'
   end
 
