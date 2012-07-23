@@ -2,7 +2,7 @@ class Spree::StaticContentController < Spree::BaseController
   caches_action :show, :cache_path => Proc.new { |controller|
     "spree_static_content/" + controller.params[:path].to_s + "_spree_static_content"
   }
-  
+
   layout :determine_layout
   
   def show
@@ -23,7 +23,7 @@ class Spree::StaticContentController < Spree::BaseController
   private
   
   def determine_layout
-    return @page.layout if @page and @page.layout.present?
+    return @page.layout if @page and @page.layout.present? and not @page.render_layout_as_partial?
     'spree/layouts/spree_application'
   end
 
