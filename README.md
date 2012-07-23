@@ -27,11 +27,20 @@ Finally, you can toggle the visibility using the visible checkbox.
 
 ## Basic Installation
 
-**For Spree 1.0.x**/1.1.x**
+**For Spree 1.0.x**
 
 1. Add the following to your Gemfile
 <pre>
   gem 'spree_static_content', :git => 'git@github.com:spree/spree_static_content.git', :branch => '1-0-stable'
+</pre>
+2. Run `bundle install`
+3. To copy and apply migrations run: `rails g spree_static_content:install`
+
+**For Spree 1.1.x**
+
+1. Add the following to your Gemfile
+<pre>
+  gem 'spree_static_content', :git => 'git@github.com:spree/spree_static_content.git', :branch => 'master'
 </pre>
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
