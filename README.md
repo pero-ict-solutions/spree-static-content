@@ -10,11 +10,20 @@ Good, clean content management of pages for Spree.  You can use this to:
   
 ## HowTo
 
-See the wiki for some more documentation on how you can use this extension.
+The title, slug, body, and meta fields are fairly self-explanatory. They will replace their respective page 
+elements on load.
 
-- use spree_editor.
-- override dynamic pages.
-- ...
+A title, slug and body element are all required.
+
+If you would like to render an entire page without the spree_application layout, specify a relative path to the
+layout file (eg. spree/layouts/layout_file_name). If you do not want this layout file to render without the full
+spree application layout, check the render layout as partial option. Remember to prefix your layout file with an
+underscore.
+
+Use the show in checkboxes to specify where the page links will be shown. Use the position setting to change the
+order in which they appear.
+
+Finally, you can toggle the visibility using the visible checkbox.
 
 ## Basic Installation
 
@@ -23,6 +32,15 @@ See the wiki for some more documentation on how you can use this extension.
 1. Add the following to your Gemfile
 <pre>
   gem 'spree_static_content', :git => 'git@github.com:spree/spree_static_content.git', :branch => '1-0-stable'
+</pre>
+2. Run `bundle install`
+3. To copy and apply migrations run: `rails g spree_static_content:install`
+
+**For Spree 1.1.x**
+
+1. Add the following to your Gemfile
+<pre>
+  gem 'spree_static_content', :git => 'git@github.com:spree/spree_static_content.git', :branch => 'master'
 </pre>
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
