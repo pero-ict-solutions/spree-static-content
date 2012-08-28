@@ -25,11 +25,11 @@ class Spree::StaticContentController < Spree::BaseController
 
   def determine_layout
     return @page.layout if @page and @page.layout.present? and not @page.render_layout_as_partial?
-    'spree/layouts/spree_application'
+    Spree::Config.layout
   end
 
   def accurate_title
     @page ? (@page.meta_title.present? ? @page.meta_title : @page.title) : nil
   end
-end
 
+end
