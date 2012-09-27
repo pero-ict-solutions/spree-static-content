@@ -1,5 +1,5 @@
 ---
-es-ES:
+es:
   activerecord:
     attributes:
       page: &page_labels
@@ -20,7 +20,7 @@ es-ES:
       page:
         one: Página
         many: Páginas
-        
+
   pages: Páginas
   static_content:
     static_pages: Páginas estáticas
