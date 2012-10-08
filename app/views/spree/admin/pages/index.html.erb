@@ -1,13 +1,10 @@
-<div class='toolbar'>
-  <ul class='actions'>
-    <li id="new_product_link">
-      <%= button_link_to t("static_content.new_page"), new_object_url, {:icon => 'add'} %>
-    </li>
-  </ul>
-  <br class='clear' />
-</div>
+<% content_for :page_actions do %>  
+  <li><%= button_link_to t("static_content.new_page"), new_object_url, :icon => 'icon-plus' %></li>
+<% end %>
 
-<h1><%=t("static_content.static_pages") %></h1>
+<% content_for :page_title do %>
+   <i class="icon-arrow-right"></i> <%= t("static_content.static_pages") %>
+<% end %>
 
 <table class="index">
 	<tr>
