@@ -1,4 +1,4 @@
-class Spree::StaticContentController < Spree::BaseController
+class Spree::StaticContentController < Spree::StoreController
 
   helper "spree/products"
   layout :determine_layout
