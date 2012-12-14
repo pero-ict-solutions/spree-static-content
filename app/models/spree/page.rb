@@ -44,9 +44,6 @@ private
       end
     end
 
-    if not_using_foreign_link?
-      Rails.cache.delete('page_not_exist/' + self.slug)
-    end
     return true
   end
 
