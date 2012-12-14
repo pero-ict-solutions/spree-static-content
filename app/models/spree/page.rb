@@ -14,13 +14,6 @@ class Spree::Page < ActiveRecord::Base
 
   attr_accessible :title, :slug, :body, :meta_title, :meta_keywords, :meta_description, :layout, :foreign_link, :position, :show_in_sidebar, :show_in_header, :show_in_footer, :visible, :render_layout_as_partial
 
-  def self.by_slug(slug)
-    slug = StaticPage::remove_spree_mount_point(slug)
-    pages = self.arel_table
-    query = pages[:slug].eq(slug).or(pages[:slug].eq("/#{slug}"))
-    self.where(query)
-  end
-
   def initialize(*args)
     super(*args)
 
@@ -35,6 +28,9 @@ class Spree::Page < ActiveRecord::Base
 private
 
   def update_positions_and_slug
+    # ensure that all slugs start with a slash
+    slug.prepend('/') if not_using_foreign_link? and not slug.start_with? '/'
+
     unless new_record?
       return unless prev_position = Spree::Page.find(self.id).position
       if prev_position > self.position
@@ -44,7 +40,7 @@ private
       end
     end
 
-    return true
+    true
   end
 
   def not_using_foreign_link?
