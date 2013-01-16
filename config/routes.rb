@@ -1,6 +1,6 @@
 module StaticPage
   def self.remove_spree_mount_point(path)
-    regex = Regexp.new Rails.application.routes.url_helpers.spree_path
+    regex = Regexp.new '\A' + Rails.application.routes.url_helpers.spree_path
     path.sub( regex, '').split('?')[0]
   end
 end

@@ -13,6 +13,12 @@ describe 'Static Content Page' do
     page.should have_content('Test page body 2')
   end
 
+  it 'should render page with a slug with multiple /' do
+    Spree::Page.create(:slug => '/t/categories/page3', :title => 'Test Page 3', :body => 'Test page body 3')
+    visit '/t/categories/page3'
+    page.should have_content('Test page body 3')
+  end
+
   it "should render a custom root page" do
     Spree::Page.create(:slug => '/', :title => 'Root Page', :body => 'Root Body')
     visit '/'
