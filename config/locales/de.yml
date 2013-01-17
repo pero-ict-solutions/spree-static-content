@@ -4,7 +4,7 @@ de:
     attributes:
       page: &page_labels
         title: Titel
-        slug: Slug
+        slug: Pfad
         body: Inhalt
         foreign_link: Externer Link (URL)
         show_in_sidebar: In der 'Sidebar' anzeigen
@@ -17,7 +17,7 @@ de:
         meta_title: Meta-Titel
         layout: Layout
     models:
-      page:
+      spree/page:
         one: Seite
         many: Seiten
 

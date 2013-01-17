@@ -1,5 +1,5 @@
-<div class="clearfix">
-  <div class="left">
+<div class="row">
+  <div class="alpha ten columns">
     <%= f.field_container :title do %>
       <%= f.label :title %> <span class="required">*</span><br />
       <%= f.text_field :title, :class => 'fullwidth title' %>
@@ -13,11 +13,13 @@
     <% end %>
 
     <%= f.field_container :body do %>
-      <%= f.label :body %><br />
+      <%= f.label :body %><span class="required">*</span><br />
       <%= f.text_area :body, {:class => 'fullwidth'} %>
       <%= f.error_message_on :body %>
     <% end %>
-
+  </div>
+  
+  <div class="omega six columns">
     <%= f.field_container :meta_title do %>
       <%= f.label :meta_title %><br />
       <%= f.text_field :meta_title, :class => 'fullwidth title' %>
@@ -35,9 +37,7 @@
       <%= f.text_field :meta_description, :class => 'fullwidth title' %>
       <%= f.error_message_on :meta_description %>
     <% end %>
-
-  </div>
-  <div class="right">
+    
     <%= f.field_container :layout do %>
       <%= f.label :layout %><br />
       <%= f.text_field :layout, :class => 'fullwidth title' %>
@@ -69,6 +69,10 @@
       <li>
         <%= f.check_box :visible %>
         <%= f.label :visible %>
+      </li>
+      <li>
+        <%= f.check_box :render_layout_as_partial %>
+        <%= f.label :render_layout_as_partial %>
       </li>
     </ul>
 

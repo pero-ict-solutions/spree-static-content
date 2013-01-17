@@ -1,38 +1,44 @@
-<div class='toolbar'>
-  <ul class='actions'>
-    <li id="new_product_link">
-      <%= button_link_to t("static_content.new_page"), new_object_url, {:icon => 'add'} %>
-    </li>
-  </ul>
-  <br class='clear' />
-</div>
+<% content_for :page_actions do %>  
+  <li><%= button_link_to t("static_content.new_page"), new_object_url, :icon => 'icon-plus' %></li>
+<% end %>
 
-<h1><%=t("static_content.static_pages") %></h1>
+<% content_for :page_title do %>
+   <%= t("static_content.static_pages") %>
+<% end %>
 
 <table class="index">
-	<tr>
-		<th><%= Spree::Page.human_attribute_name(:title) %></th>
-		<th><%= t("static_content.link") %></th>
-		<th><%= Spree::Page.human_attribute_name(:visible) %></th>
-		<th><%= t("action") %></th>
-  </tr>
-	<tbody>
-    	<% @pages.each do |page| %>
-		<tr class="<%= cycle('even', 'odd') %>" id="<%= dom_id page %>">
-			<td>
-				<%= page.title %>
-			</td>
-			<td>
-				<%= link_to page.link, page.link %>
-			</td>
-			<td>
-			  <%= icon('tick') if page.visible %>
-			</td>
-			<td>
-        <%= link_to_edit page %> &nbsp;
-        <%= link_to_delete page %>
-	    </td>
-		</tr>
-		<% end %>
-	</tbody>
+  <colgroup>
+    <col style="width: 40%" />
+    <col style="width: 40%" />
+    <col style="width: 10%" />
+    <col style="width: 10%" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th><%= Spree::Page.human_attribute_name(:title) %></th>
+      <th><%= t("static_content.link") %></th>
+      <th><%= Spree::Page.human_attribute_name(:visible) %></th>
+      <th class="actions"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr class="<%= cycle('odd', 'even') %>" id="<%= dom_id page %>">
+        <td>
+          <%= page.title %>
+        </td>
+        <td>
+          <%= link_to page.link, page.link, :target => '_blank' %>
+        </td>
+        <td class="align-center">
+          <%= content_tag(:i, '', :class => 'icon-ok green') if page.visible %>
+        </td>
+        <td  class="actions">
+          <%= link_to_edit page, :no_text => true %>
+          <%= link_to_delete page, :no_text => true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
