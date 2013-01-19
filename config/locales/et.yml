@@ -2,7 +2,7 @@
 et:
   activerecord:
     attributes:
-      page:
+      spree/page:
         title: Pealkiri
         slug: Püsiviide
         body: Sisu
