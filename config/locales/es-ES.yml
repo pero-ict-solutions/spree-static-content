@@ -2,7 +2,7 @@
 es-ES:
   activerecord:
     attributes:
-      page: &page_labels
+      spree/page: &page_labels
         title: Título
         slug: Slug
         body: Cuerpo

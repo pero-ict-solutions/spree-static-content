@@ -2,7 +2,7 @@
 ru:
   activerecord:
     attributes:
-      page:
+      spree/page:
         title: Заголовок
         slug: Постоянная ссылка
         body: Основной текст
