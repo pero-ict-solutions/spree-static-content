@@ -1,5 +1,7 @@
 class PrefixPagesTableName < ActiveRecord::Migration
   def change
-    rename_table :pages, :spree_pages
+    if table_exists?(:pages)
+      rename_table :pages, :spree_pages
+    end
   end
 end
