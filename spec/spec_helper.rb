@@ -14,8 +14,8 @@ ActiveRecord::Migrator.migrate File.expand_path("../dummy/db/migrate/", __FILE__
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 # Requires factories defined in spree_core
-require 'spree/core/testing_support/factories'
-require 'spree/core/url_helpers'
+require 'spree/testing_support/factories'
+require 'spree/testing_support/url_helpers'
 
 RSpec.configure do |config|
   # == Mock Framework
@@ -35,7 +35,5 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
-  config.include Spree::Core::UrlHelpers
-  #config.include Devise::TestHelpers, :type => :controller
-
+  config.include Spree::TestingSupport::UrlHelpers
 end
