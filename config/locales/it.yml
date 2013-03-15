@@ -2,7 +2,7 @@
 it:
   activerecord:
     attributes:
-      page:
+      spree/page:
         title: Titolo
         slug: Slug
         body: Testo
