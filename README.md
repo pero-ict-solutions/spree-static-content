@@ -45,7 +45,9 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 1. Add the following to your Gemfile
 
-  gem 'spree_static_content', :github => 'spree/spree_static_content'
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content'
+```
 
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
@@ -54,7 +56,9 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 1. Add the following to your Gemfile
 
-  gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-3-stable'
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-3-stable'
+```
 
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
@@ -64,7 +68,9 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 1. Add the following to your Gemfile
 
-  gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-2-stable'
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-2-stable'
+```
 
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
@@ -74,7 +80,9 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 1. Add the following to your Gemfile
 
-  gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-1-stable'
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-1-stable'
+```
 
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
@@ -83,7 +91,9 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 1. Add the following to your Gemfile
 
-  gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-0-stable'
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-0-stable'
+```
 
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
