@@ -1,9 +1,9 @@
 class AddMetaFieldsToPages < ActiveRecord::Migration
-  def self.up
+  def up
     add_column :pages, :meta_keywords, :string
     add_column :pages, :meta_description, :string
   end
 
-  def self.down
+  def down
   end
 end

@@ -1,3 +1,1 @@
-class Spree::Admin::PagesController < Spree::Admin::ResourceController
-  
-end
+class Spree::Admin::PagesController < Spree::Admin::ResourceController; end

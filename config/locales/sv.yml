@@ -1,0 +1,40 @@
+---
+sv:
+  page: Sida
+  pages: Sidor
+  static_content:
+    static_pages: Statiska sidor
+    static_pages_desc: Hantera statiska sidor med 'WYSIWYG editor'.
+    new_page: Ny sida
+    editing_page: Editera sidan
+    confirm_delete: Är du säker?
+    link: Länk
+    page_navigation_title: Sidor
+
+  activerecord:
+    attributes:
+      spree/page: &page_labels
+        title: Titel
+        slug: Slug
+        body: Body
+        foreign_link: Extern länk (URL)
+        show_in_sidebar: Visa i 'sidebar'
+        show_in_header: Visa i 'header'
+        show_in_footer: Visa i 'footer'
+        position: Position
+        visible: Synlig
+        meta_title: Meta Titel
+        meta_keywords: Meta Keywords
+        meta_description: Meta Beskrivning
+        layout: Layout
+    models:
+      spree/page:
+        one: Sida
+        other: "%{count} Sidor"
+        few: Sidor
+        many: Sidor
+
+  helpers:
+    label:
+      page:
+        <<: *page_labels

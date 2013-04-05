@@ -1,8 +1,8 @@
 class AddDefaultTrueToVisibleForPage < ActiveRecord::Migration
-  def self.up
-    change_column :pages, :visible, :boolean, :default=> true
+  def up
+    change_column :pages, :visible, :boolean, default: true
   end
 
-  def self.down
+  def down
   end
 end

@@ -1,5 +1,16 @@
 ---
 de:
+  page: Seite
+  pages: Seiten
+  static_content:
+    static_pages: Statische Seiten
+    static_pages_desc: Verwaltung statischer Seiten mit einem WYSIWYG-Editor.
+    new_page: Neue Seite
+    editing_page: Seite bearbeiten
+    confirm_delete: Sind Sie sicher?
+    link: Link
+    page_navigation_title: Seiten
+
   activerecord:
     attributes:
       spree/page: &page_labels
@@ -12,26 +23,18 @@ de:
         show_in_footer: Im 'Footer' anzeigen
         position: Position
         visible: Sichtbar
+        meta_title: Meta-Titel
         meta_keywords: Meta-Schlüsselwörter
         meta_description: Meta-Beschreibung
-        meta_title: Meta-Titel
         layout: Layout
     models:
       spree/page:
         one: Seite
+        other: "%{count} Seiten"
+        few: Seiten
         many: Seiten
 
   helpers:
     label:
       page:
         <<: *page_labels
-
-  page: Seite
-  pages: Seiten
-  static_content:
-    static_pages: Statische Seiten
-    static_pages_desc: Verwaltung statischer Seiten mit einem WYSIWYG-Editor
-    new_page: Neue Seite
-    editing_page: Seite bearbeiten
-    confirm_delete: Sind Sie sicher?
-    link: Link

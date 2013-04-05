@@ -1,9 +1,9 @@
 class AddLayoutToPages < ActiveRecord::Migration
-  def self.up
+  def up
     add_column :pages, :layout, :string
   end
 
-  def self.down
+  def down
     remove_column :pages, :layout
   end
 end

@@ -1,23 +1,40 @@
 ---
 nl-BE:
+  page: Page
   pages: Statische pagina's
   static_content:
     static_pages: Statische pagina's
     static_pages_desc: Beheer statische pagina's met een WYSIWYG editor.
-    title: Titel
-    slug: Slug
-    body: Body
     new_page: Nieuwe pagina
     editing_page: Pagina bewerken
-    foreign_link: Externe link (URL)
-    show_in_header: Toon in header
-    show_in_footer: Toon in footer
-    position: Positie
-    visible: Zichtbaar?
-    confirm_delete: Weet u zeker dat u deze pagina wilt verwijderen ?
+    confirm_delete: Weet u zeker dat u deze pagina wilt verwijderen?
     link: Link
-    meta_title: Meta Titel
-    meta_keywords: Meta Keywords
-    meta_description: Meta Description
-    layout: Layout
-    show_in_sidebar: Toon in zijbalk?
+    page_navigation_title: Pagina's
+
+  activerecord:
+    attributes:
+      spree/page: &page_labels
+        title: Titel
+        slug: Slug
+        body: Body
+        foreign_link: Externe link (URL)
+        show_in_sidebar: Toon in zijbalk?
+        show_in_header: Toon in header?
+        show_in_footer: Toon in footer?
+        position: Positie
+        visible: Zichtbaar?
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        layout: Layout
+    models:
+      spree/page:
+        one: Page
+        other: "%{count} Statische pagina's"
+        few: Statische pagina's
+        many: Statische pagina's
+
+  helpers:
+    label:
+      page:
+        <<: *page_labels
