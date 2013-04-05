@@ -1,40 +1,21 @@
 ---
 pl:
-  page: Page
   pages: Strony statyczne
   static_content:
     static_pages: Strony statyczne
     static_pages_desc: Zarządzaj stronami statycznymi.
+    title: Tytuł
+    slug: Skrót
+    body: Zawartość
     new_page: Nowa strona
     editing_page: Edycja strony
-    confirm_delete: Jesteś pewien?
+    foreign_link: Odnośnik zewnętrzny
+    show_in_header: Pokaż w nagłówku
+    show_in_footer: Pokaż w stopce
+    position: Pozycja
+    visible: Widoczna
+    confirm_delete: Jesteś pewien ?
     link: Odnośnik
-    page_navigation_title: Strony statyczne
-
-  activerecord:
-    attributes:
-      spree/page: &page_labels
-        title: Tytuł
-        slug: Skrót
-        body: Zawartość
-        foreign_link: Odnośnik zewnętrzny
-        show_in_sidebar: Show in sidebar
-        show_in_header: Pokaż w nagłówku
-        show_in_footer: Pokaż w stopce
-        position: Pozycja
-        visible: Widoczna
-        meta_title: Tytół (w nagłówku przeglądarki)
-        meta_keywords: Słowa kluczowe (SEO)
-        meta_description: Skrócony opis (SEO)
-        layout: Layout
-    models:
-      spree/page:
-        one: Page
-        other: "%{count} Strony statyczne"
-        few: Strony statyczne
-        many: Strony statyczne
-
-  helpers:
-    label:
-      page:
-        <<: *page_labels
+    meta_title: Tytół (w nagłówku przeglądarki)
+    meta_keywords: Słowa kluczowe (SEO)
+    meta_description: Skrócony opis (SEO)

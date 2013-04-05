@@ -1,19 +1,8 @@
 ---
 et:
-  page: Lehekülg
-  pages: Leheküljed
-  static_content:
-    static_pages: Leheküljed
-    static_pages_desc: Staatiliste lehekülgede haldamine WYSIWYG editori abil.
-    new_page: Uus lehekülg
-    editing_page: Muudan lehekülge
-    confirm_delete: Oled kindel?
-    link: Link
-    page_navigation_title: Leheküljed
-
   activerecord:
     attributes:
-      spree/page: &page_labels
+      spree/page:
         title: Pealkiri
         slug: Püsiviide
         body: Sisu
@@ -23,18 +12,21 @@ et:
         show_in_footer: Kuva lehekülg jaluses
         position: Positsioon
         visible: Nähtav
-        meta_title: Meta pealkiri
         meta_keywords: Meta võtmesõnad
         meta_description: Meta kirjeldus
         layout: Layout
     models:
-      spree/page:
+      page:
         one: Lehekülg
-        other: "%{count} Leheküljed"
-        few: Leheküljed
         many: Leheküljed
 
-  helpers:
-    label:
-      page:
-        <<: *page_labels
+  page: Lehekülg
+  pages: Leheküljed
+  static_content:
+    static_pages: Leheküljed
+    static_pages_desc: Staatiliste lehekülgede haldamine WYSIWYG editori abil.
+    new_page: Uus lehekülg
+    editing_page: Muudan lehekülge
+    confirm_delete: Oled kindel?
+    link: Link
+    meta_title: Meta pealkiri

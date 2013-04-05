@@ -1,40 +1,23 @@
 ---
 de-CH:
-  page: Seite
   pages: Seiten
   static_content:
     static_pages: Statische Seiten
-    static_pages_desc: Verwaltung statischer Seiten mit einem WYSIWYG-Editor.
+    static_pages_desc: Manage static page with WYSIWYG editor.
+    title: Titel
+    slug: Slug
+    body: Body
     new_page: Neue Seite
     editing_page: Seite bearbeiten
+    foreign_link: Externer Link (URL)
+    show_in_sidebar: In der Sidebar anzeigen
+    show_in_header: Im Header anzeigen
+    show_in_footer: Im Footer anzeigen
+    position: Position
+    visible: Sichtbar
     confirm_delete: Bist du sicher?
     link: Link
-    page_navigation_title: Seiten
-
-  activerecord:
-    attributes:
-      spree/page: &page_labels
-        title: Titel
-        slug: Pfad
-        body: Inhalt
-        foreign_link: Externer Link (URL)
-        show_in_sidebar: In der 'Sidebar' anzeigen
-        show_in_header: Im 'Header' anzeigen
-        show_in_footer: Im 'Footer' anzeigen
-        position: Position
-        visible: Sichtbar
-        meta_title: Meta-Titel
-        meta_keywords: Meta-Schlüsselwörter
-        meta_description: Meta-Beschreibung
-        layout: Layout
-    models:
-      spree/page:
-        one: Seite
-        other: "%{count} Seiten"
-        few: Seiten
-        many: Seiten
-
-  helpers:
-    label:
-      page:
-        <<: *page_labels
+    meta_title: Meta-Titel
+    meta_keywords: Meta-Schl&uuml;sselw&ouml;rter
+    meta_description: Meta-Beschreibung
+    layout: Layout

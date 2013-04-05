@@ -1,48 +1,39 @@
-require 'simplecov'
-SimpleCov.start do
-  add_group 'Controllers', 'app/controllers'
-  add_group 'Helpers', 'app/helpers'
-  add_group 'Mailers', 'app/mailers'
-  add_group 'Models', 'app/models'
-  add_group 'Views', 'app/views'
-  add_group 'Libraries', 'lib'
-end
+# Configure Rails Environment
+ENV["RAILS_ENV"] = "test"
 
-ENV["RAILS_ENV"] = 'test'
+require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 
-require File.expand_path('../dummy/config/environment.rb',  __FILE__)
-require 'rspec/rails'
 require 'ffaker'
-require 'database_cleaner'
-require 'i18n-spec'
+require 'rspec/rails'
 
 # Run any available migration
-ActiveRecord::Migrator.migrate File.expand_path('../dummy/db/migrate/', __FILE__)
+ActiveRecord::Migrator.migrate File.expand_path("../dummy/db/migrate/", __FILE__)
 
-Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
+# Requires supporting ruby files with custom matchers and macros, etc,
+# in spec/support/ and its subdirectories.
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+# Requires factories defined in spree_core
 require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
-  config.include Spree::TestingSupport::UrlHelpers
-
-  config.color = true
+  # == Mock Framework
+  #
+  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
+  #
+  # config.mock_with :mocha
+  # config.mock_with :flexmock
+  # config.mock_with :rr
   config.mock_with :rspec
-  config.use_transactional_fixtures = false
-  config.fail_fast = ENV['FAIL_FAST'] || false
 
-  config.before do
-    if example.metadata[:js]
-      DatabaseCleaner.strategy = :truncation
-    else
-      DatabaseCleaner.strategy = :transaction
-    end
-    DatabaseCleaner.start
-  end
+  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
-  config.after do
-    DatabaseCleaner.clean
-  end
+  # If you're not using ActiveRecord, or you'd prefer not to run each of your
+  # examples within a transaction, remove the following line or assign false
+  # instead of true.
+  config.use_transactional_fixtures = true
+
+  config.include Spree::TestingSupport::UrlHelpers
 end

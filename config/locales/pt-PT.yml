@@ -1,16 +1,5 @@
 ---
 pt-PT:
-  page: Página
-  pages: Páginas
-  static_content:
-    static_pages: Páginas estáticas
-    static_pages_desc: Gere páginas estáticas com um 'editor WYSIWYG'.
-    new_page: Nova página
-    editing_page: Editar página
-    confirm_delete: Tem a certeza?
-    link: Link
-    page_navigation_title: Páginas
-
   activerecord:
     attributes:
       spree/page: &page_labels
@@ -23,18 +12,28 @@ pt-PT:
         show_in_footer: Mostrar no rodapé
         position: Posição
         visible: Visível
-        meta_title: Meta Título
-        meta_keywords: Meta Palavras
-        meta_description: Meta Descrição
-        layout: Traçado
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        meta_title: Meta Title
+        layout: Layout
     models:
-      spree/page:
+      page:
         one: Página
-        other: "%{count} Páginas"
-        few: Páginas
         many: Páginas
 
   helpers:
     label:
       page:
         <<: *page_labels
+
+  page: Página
+  pages: Páginas
+  static_content:
+    static_pages: Páginas estáticas
+    static_pages_desc: Gere páginas estáticas com um editor WYSIWYG.
+    new_page: Nova página
+    editing_page: Editar página
+    confirm_delete: Tem a certeza?
+    link: Link
+    meta_title: Meta Title
+    page_navigation_title: "Páginas"

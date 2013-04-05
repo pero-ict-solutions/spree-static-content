@@ -1,9 +1,9 @@
 class AddMetaTitleToPage < ActiveRecord::Migration
-  def up
+  def self.up
     add_column :pages, :meta_title, :string
   end
 
-  def down
+  def self.down
     remove_column :pages, :meta_title
   end
 end

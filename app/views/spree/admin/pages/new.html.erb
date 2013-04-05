@@ -1,14 +1,14 @@
 <% content_for :page_title do %>
-   <%= t('static_content.static_pages') %> <i class="icon-arrow-right"></i> <%= t('static_content.new_page') %>
+   <%= t("static_content.static_pages") %> <i class="icon-arrow-right"></i> <%= t("static_content.new_page") %>
 <% end %>
 
 <% content_for :page_actions do %>
-  <li><%= button_link_to t(:back_to_static_pages_list), spree.admin_pages_url, icon: 'icon-arrow-left' %></li>
+  <li><%= button_link_to t(:back_to_static_pages_list), spree.admin_pages_url, :icon => 'icon-arrow-left' %></li>
 <% end %>
 
-<%= render 'spree/shared/error_messages', target: @page %>
+<%= render "spree/shared/error_messages", :target => @page %>
 
 <%= form_for [:admin, @page] do |f| %>
-  <%= render partial: 'form', f: f %>
-  <%= render partial: 'spree/admin/shared/edit_resource_links' %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
 <% end %>

@@ -1,16 +1,17 @@
 class AddVisibleToPages < ActiveRecord::Migration
-  class Page < ActiveRecord::Base; end
+  class Page < ActiveRecord::Base
+  end
 
-  def up
+  def self.up
     add_column :pages, :visible, :boolean
     if Page.table_exists?
-      Page.update_all visible: true
+      Page.update_all :visible => true
     else
-      Spree::Page.update_all visible: true
+      Spree::Page.update_all :visible => true
     end
   end
 
-  def down
+  def self.down
     remove_column :pages, :visible
   end
 end

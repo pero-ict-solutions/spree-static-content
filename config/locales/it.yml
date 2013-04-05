@@ -1,5 +1,25 @@
 ---
 it:
+  activerecord:
+    attributes:
+      spree/page:
+        title: Titolo
+        slug: Slug
+        body: Testo
+        foreign_link: Link esterno (URL)
+        show_in_sidebar: Mostra nella sidebar
+        show_in_header: Mostra nell'header
+        show_in_footer: Mostra nel footer
+        position: Posizione
+        visible: Visibile
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        layout: Layout
+    models:
+      page:
+        one: Pagina
+        many: Pagine
+
   page: Pagina
   pages: Pagine
   static_content:
@@ -8,33 +28,5 @@ it:
     new_page: Nuova pagina
     editing_page: Modifica pagina
     confirm_delete: Sei sicuro?
-    link: Legame
-    page_navigation_title: Pagine
-
-  activerecord:
-    attributes:
-      spree/page: &page_labels
-        title: Titolo
-        slug: Slug
-        body: Testo
-        foreign_link: Legame esterno (URL)
-        show_in_sidebar: Mostra nella sidebar
-        show_in_header: Mostra nell'header
-        show_in_footer: Mostra nel footer
-        position: Posizione
-        visible: Visibile
-        meta_title: Meta Titolo
-        meta_keywords: Meta Parole Chiave
-        meta_description: Meta Descrizione
-        layout: Progetto
-    models:
-      spree/page:
-        one: Pagina
-        other: "%{count} Pagine"
-        few: Pagine
-        many: Pagine
-
-  helpers:
-    label:
-      page:
-        <<: *page_labels
+    link: Link
+    meta_title: Meta Title

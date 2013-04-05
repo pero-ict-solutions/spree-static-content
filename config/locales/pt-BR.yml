@@ -1,40 +1,15 @@
 ---
 pt-BR:
-  page: Página
   pages: Páginas
   static_content:
     static_pages: Páginas estáticas
-    static_pages_desc: Administrar página estática com 'editor WYSIWYG'.
+    static_pages_desc: Administrar página estática com editor visual (WYSIWYG).
+    title: Título
+    slug: Slug
+    body: Corpo
     new_page: Nova página
     editing_page: Editando página
-    confirm_delete: Você tem certeza?
-    link: Link
-    page_navigation_title: Páginas
-
-  activerecord:
-    attributes:
-      spree/page: &page_labels
-        title: Título
-        slug: Slug
-        body: Corpo
-        foreign_link: Link externo (URL)
-        show_in_sidebar: Mostrar na barra lateral
-        show_in_header: Mostrar no cabeçalho
-        show_in_footer: Mostrar no rodapé
-        position: Posição
-        visible: Visível
-        meta_title: Meta Título
-        meta_keywords: Meta Palavras
-        meta_description: Meta Descrição
-        layout: Traçado
-    models:
-      spree/page:
-        one: Página
-        other: "%{count} Páginas"
-        few: Páginas
-        many: Páginas
-
-  helpers:
-    label:
-      page:
-        <<: *page_labels
+    foreign_link: Link externo (URL)
+    show_in_header: Mostrar no cabeçalho
+    show_in_footer: Mostrar no rodapé
+    position: Posição
