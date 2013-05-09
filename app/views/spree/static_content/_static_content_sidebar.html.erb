@@ -1,6 +1,6 @@
 <% if Spree::Page.visible.sidebar_links.any? %>
 <nav id="sidebar-pages-menu" class="sidebar-item">
-  <h6 class="page-navigation-title"><%= t("static_content.page_navigation_title")%></h6>
+  <h6 class="page-navigation-title"><%= Spree.t("static_content.page_navigation_title")%></h6>
   <ul><%= render :partial => "spree/static_content/static_content_list", :collection => Spree::Page.visible.sidebar_links, :as => :page %></ul>
 </nav>
 <% end %>
