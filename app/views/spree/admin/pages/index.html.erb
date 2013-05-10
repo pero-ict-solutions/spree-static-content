@@ -1,9 +1,9 @@
 <% content_for :page_actions do %>  
-  <li><%= button_link_to t("static_content.new_page"), new_object_url, :icon => 'icon-plus' %></li>
+  <li><%= button_link_to Spree.t("static_content.new_page"), new_object_url, :icon => 'icon-plus' %></li>
 <% end %>
 
 <% content_for :page_title do %>
-   <%= t("static_content.static_pages") %>
+   <%= Spree.t("static_content.static_pages") %>
 <% end %>
 
 <table class="index">
@@ -16,7 +16,7 @@
   <thead>
     <tr>
       <th><%= Spree::Page.human_attribute_name(:title) %></th>
-      <th><%= t("static_content.link") %></th>
+      <th><%= Spree.t("static_content.link") %></th>
       <th><%= Spree::Page.human_attribute_name(:visible) %></th>
       <th class="actions"></th>
     </tr>

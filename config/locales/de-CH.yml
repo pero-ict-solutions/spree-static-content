@@ -1,23 +1,24 @@
 ---
 de-CH:
-  pages: Seiten
-  static_content:
-    static_pages: Statische Seiten
-    static_pages_desc: Manage static page with WYSIWYG editor.
-    title: Titel
-    slug: Slug
-    body: Body
-    new_page: Neue Seite
-    editing_page: Seite bearbeiten
-    foreign_link: Externer Link (URL)
-    show_in_sidebar: In der Sidebar anzeigen
-    show_in_header: Im Header anzeigen
-    show_in_footer: Im Footer anzeigen
-    position: Position
-    visible: Sichtbar
-    confirm_delete: Bist du sicher?
-    link: Link
-    meta_title: Meta-Titel
-    meta_keywords: Meta-Schl&uuml;sselw&ouml;rter
-    meta_description: Meta-Beschreibung
-    layout: Layout
+    spree:
+      pages: Seiten
+      static_content:
+        static_pages: Statische Seiten
+        static_pages_desc: Manage static page with WYSIWYG editor.
+        title: Titel
+        slug: Slug
+        body: Body
+        new_page: Neue Seite
+        editing_page: Seite bearbeiten
+        foreign_link: Externer Link (URL)
+        show_in_sidebar: In der Sidebar anzeigen
+        show_in_header: Im Header anzeigen
+        show_in_footer: Im Footer anzeigen
+        position: Position
+        visible: Sichtbar
+        confirm_delete: Bist du sicher?
+        link: Link
+        meta_title: Meta-Titel
+        meta_keywords: Meta-Schl&uuml;sselw&ouml;rter
+        meta_description: Meta-Beschreibung
+        layout: Layout
