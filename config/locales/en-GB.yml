@@ -1,23 +1,24 @@
 ---
 en-GB:
-  pages: Pages
-  static_content:
-    static_pages: Static pages
-    static_pages_desc: Manage static page with WYSIWYG editor.
-    title: Title
-    slug: Slug
-    body: Body
-    new_page: New page
-    editing_page: Editing page
-    foreign_link: Foreign link (URL)
-    show_in_sidebar: Show in sidebar
-    show_in_header: Show in header
-    show_in_footer: Show in footer
-    position: Position
-    visible: Visible
-    confirm_delete: Are you sure?
-    link: Link
-    meta_title: Meta Title
-    meta_keywords: Meta Keywords
-    meta_description: Meta Description
-    layout: Layout
+    spree:
+      pages: Pages
+      static_content:
+        static_pages: Static pages
+        static_pages_desc: Manage static page with WYSIWYG editor.
+        title: Title
+        slug: Slug
+        body: Body
+        new_page: New page
+        editing_page: Editing page
+        foreign_link: Foreign link (URL)
+        show_in_sidebar: Show in sidebar
+        show_in_header: Show in header
+        show_in_footer: Show in footer
+        position: Position
+        visible: Visible
+        confirm_delete: Are you sure?
+        link: Link
+        meta_title: Meta Title
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        layout: Layout
