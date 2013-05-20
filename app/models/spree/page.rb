@@ -5,6 +5,9 @@ class Spree::Page < ActiveRecord::Base
   validates_presence_of [:slug, :body], :if => :not_using_foreign_link?
   validates_presence_of :layout, :if => :render_layout_as_partial?
 
+  validates :slug, :uniqueness => true, :if => :not_using_foreign_link?
+  validates :foreign_link, :uniqueness => true, :allow_blank => true
+
   scope :visible, where(:visible => true)
   scope :header_links, where(:show_in_header => true).visible
   scope :footer_links, where(:show_in_footer => true).visible
