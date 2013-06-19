@@ -29,7 +29,11 @@
           <%= page.title %>
         </td>
         <td>
-          <%= link_to page.link, page.link, :target => '_blank' %>
+          <% if page.foreign_link.present? %>
+            <%= link_to page.link, page.link, :target => '_blank' %>
+          <% else %>
+            <%= link_to page.link, spree.root_path + page.slug, :target => '_blank' %>
+          <% end %>
         </td>
         <td class="align-center">
           <%= content_tag(:i, '', :class => 'icon-ok green') if page.visible %>
