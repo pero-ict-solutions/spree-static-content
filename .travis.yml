@@ -1,6 +1,5 @@
 language: ruby
 rvm:
-  - 1.8.7
   - 1.9.2
   - 1.9.3
   - 2.0.0
@@ -13,9 +12,6 @@ notifications:
     - jdyer@spreecommerce.com
     - peter@pero-ict.nl
   irc: "irc.freenode.org#spree"
-matrix:
-  allow_failures:
-    - rvm: 2.0.0
 branches:
   only:
     - master
