@@ -27,10 +27,10 @@ Spree::Core::Engine.routes.prepend do
   end
 
   constraints(Spree::StaticRoot) do
-    match '/', :to => 'static_content#show', :via => :get, :as => 'static'
+    match '/', :to => 'static_content#show', :via => :get
   end
 
   constraints(Spree::StaticPage) do
-    match '/*path', :to => 'static_content#show', :via => :get, :as => 'static'
+    match '/*path', :to => 'static_content#show', :via => :get
   end
 end
