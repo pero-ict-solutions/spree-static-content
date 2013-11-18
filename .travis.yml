@@ -5,7 +5,7 @@ script: "DISPLAY=:99.0 bundle exec rake spec"
 notifications:
   email:
     - peter@spreecommerce.com
-  irc:
+  irc: 
     channels:
       - "irc.freenode.org#spree"
     use_notice: true
