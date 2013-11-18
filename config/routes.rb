@@ -20,7 +20,7 @@ class Spree::StaticRoot
   end
 end
 
-Spree::Core::Engine.routes.prepend do
+Spree::Core::Engine.add_routes do
 
   namespace :admin do
     resources :pages
