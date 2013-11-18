@@ -11,10 +11,10 @@ script: "DISPLAY=:99.0 bundle exec spec"
 notifications:
   email:
     - peter@spreecommerce.com
-  irc: "irc.freenode.org#spree"
-matrix:
-  allow_failures:
-    - rvm: 2.0.0
+  irc: 
+    channels:
+      - "irc.freenode.org#spree"
+    use_notice: true
 branches:
   only:
     - master
