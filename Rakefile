@@ -1,7 +1,8 @@
-require 'rubygems'
-require 'rake'
-require 'rake/testtask'
-require 'rspec/core/rake_task'
+# encoding: utf-8
+require 'bundler'
+Bundler::GemHelper.install_tasks
+Bundler.setup
+
 require 'spree/testing_support/common_rake'
 
 Bundler::GemHelper.install_tasks
