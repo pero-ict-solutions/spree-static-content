@@ -13,7 +13,6 @@ notifications:
 branches:
   only:
     - master
-    - 1-0-stable
-    - 1-1-stable
-    - 1-2-stable
     - 1-3-stable
+    - 2-0-stable
+    - 2-1-stable
