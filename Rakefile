@@ -6,7 +6,6 @@ Bundler.setup
 require 'spree/testing_support/common_rake'
 
 Bundler::GemHelper.install_tasks
-RSpec::Core::RakeTask.new
 
 desc "Default Task"
 task :default => [ :spec ]
