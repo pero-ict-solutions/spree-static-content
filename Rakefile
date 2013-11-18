@@ -14,7 +14,7 @@ task :default => [ :spec ]
 namespace :test_app do
   desc 'Rebuild test and cucumber databases'
   task :rebuild_dbs do
-    system("cd spec/test_app && rake db:drop db:migrate RAILS_ENV=test && rake db:drop db:migrate RAILS_ENV=cucumber")
+    system("cd spec/test_app && rake db:drop db:migrate RAILS_ENV=test && rake db:drop db:migrate RAILS_ENV=cucumber && rake railties:install:migrations FROM=spree_static_content db:migrate")
   end
 end
 

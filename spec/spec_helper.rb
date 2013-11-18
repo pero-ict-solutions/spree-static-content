@@ -36,4 +36,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.include Spree::TestingSupport::UrlHelpers
+
+  config.include Capybara::DSL
 end
