@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 1.9.3
   - 2.0.0
-bundler_args: --without development production --quiet
+bundler_args: --without production
 before_script:
   - "bundle exec rake test_app"
 script: "DISPLAY=:99.0 bundle exec rspec spec"
