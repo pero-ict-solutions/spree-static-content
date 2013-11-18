@@ -3,7 +3,7 @@ class AddVisibleToPages < ActiveRecord::Migration
   end
 
   def self.up
-    add_column :pages, :visible, :boolean
+    add_column :spree_pages, :visible, :boolean
     if Page.table_exists?
       Page.update_all :visible => true
     else
@@ -12,6 +12,6 @@ class AddVisibleToPages < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :pages, :visible
+    remove_column :spree_pages, :visible
   end
 end
