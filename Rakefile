@@ -1,12 +1,11 @@
-# encoding: utf-8
-require 'bundler'
-Bundler::GemHelper.install_tasks
-Bundler.setup
-
+require 'rubygems'
+require 'rake'
+require 'rake/testtask'
 require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new
-
 require 'spree/testing_support/common_rake'
+
+Bundler::GemHelper.install_tasks
+RSpec::Core::RakeTask.new
 
 desc "Default Task"
 task :default => [ :spec ]
