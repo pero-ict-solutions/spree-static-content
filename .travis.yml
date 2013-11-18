@@ -1,6 +1,5 @@
 language: ruby
 rvm:
-  - 1.8.7
   - 1.9.2
   - 1.9.3
   - 2.0.0
@@ -11,7 +10,7 @@ script: "DISPLAY=:99.0 bundle exec spec"
 notifications:
   email:
     - peter@spreecommerce.com
-  irc: 
+  irc:
     channels:
       - "irc.freenode.org#spree"
     use_notice: true
