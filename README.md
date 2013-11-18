@@ -41,62 +41,16 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 ## Basic Installation
 
-**For Spree HEAD**
-
 1. Add the following to your Gemfile
 
 ```
-gem 'spree_static_content', :github => 'spree/spree_static_content'
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '2-0-stable'
 ```
 
 2. Run `bundle install`
-3. To copy and apply migrations run: `rails g spree_static_content:install`
+3. To copy apply migrations run: `bundle exec rake railties:install:migrations FROM=spree_static_content`
+4. Then to apply the migrations run: `bundle exec rake db:migrate`
 
-**For Spree 1.3.x**
-
-1. Add the following to your Gemfile
-
-```
-gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-3-stable'
-```
-
-2. Run `bundle install`
-3. To copy and apply migrations run: `rails g spree_static_content:install`
-
-
-**For Spree 1.2.x**
-
-1. Add the following to your Gemfile
-
-```
-gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-2-stable'
-```
-
-2. Run `bundle install`
-3. To copy and apply migrations run: `rails g spree_static_content:install`
-
-
-**For Spree 1.1.x**
-
-1. Add the following to your Gemfile
-
-```
-gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-1-stable'
-```
-
-2. Run `bundle install`
-3. To copy and apply migrations run: `rails g spree_static_content:install`
-
-**For Spree 1.0.x**
-
-1. Add the following to your Gemfile
-
-```
-gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-0-stable'
-```
-
-2. Run `bundle install`
-3. To copy and apply migrations run: `rails g spree_static_content:install`
 
 ## Development
 
