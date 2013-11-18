@@ -1,6 +1,6 @@
 # Spree Static Content
 
-[![Build Status](https://secure.travis-ci.org/spree/spree_static_content.png?branch=master)](http://travis-ci.org/spree/spree_static_content)
+[![Build Status](https://secure.travis-ci.org/spree/spree_static_content.png?branch=1-3-stable)](http://travis-ci.org/spree/spree_static_content)
 
 Good, clean content management of pages for Spree.  You can use this to:
 
@@ -38,29 +38,20 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 ## Basic Installation
 
-**For Spree 1.1.x**
-
 1. Add the following to your Gemfile
 <pre>
-  gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :branch => '1-1-stable'
+  gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :branch => '1-3-stable'
 </pre>
 2. Run `bundle install`
-3. To copy and apply migrations run: `rails g spree_static_content:install`
+3. To copy the migrations run: `bundle exec rake railties:install:migrations FROM=spree_static_content`
+4. Apply them by running `bundle exec rake db:migrate`
 
-**For Spree 1.0.x**
-
-1. Add the following to your Gemfile
-<pre>
-  gem 'spree_static_content', :git => 'git@github.com:spree/spree_static_content.git', :branch => '1-1-stable'
-</pre>
-2. Run `bundle install`
-3. To copy and apply migrations run: `rails g spree_static_content:install`
 
 ## Development
 
 1. fork the repo here: https://github.com/spree/spree_static_content
 2. inside your fork run `bundle install`
-3. make sure the tests can run on your system run : `bundle exec rake test_app && bundle exec rspec spec`
+3. make sure the tests can run on your system run : `bundle exec rake test_app && bundle exec rake`
 
 You can also run `bundle exec rake test_app` and then to run the specs run `bundle exec rake`
 

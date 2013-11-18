@@ -1,11 +1,5 @@
 source 'http://rubygems.org/'
 
-unless ENV["CI"]
-  if RUBY_VERSION < "1.9"
-    gem "ruby-debug"
-  else
-    gem "ruby-debug19"
-  end
-end
+gem "spree", github: "spree/spree", branch: "1-3-stable"
 
 gemspec
