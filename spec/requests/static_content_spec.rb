@@ -16,7 +16,6 @@ describe 'Static Content Page' do
   it 'should render page with a slug with multiple /' do
     Spree::Page.create(:slug => '/about-us/categories/page3', :title => 'Test Page 3', :body => 'Test page body 3')
     visit '/about-us/categories/page3'
-    save_and_open_page
     page.should have_content('Test page body 3')
   end
 
@@ -30,6 +29,13 @@ describe 'Static Content Page' do
     p = FactoryGirl.create :product
     visit spree.product_path(p)
     page.should have_content(p.name)
+  end
+
+  it "renders the sidebar links properly" do
+    Spree::Page.create(:slug => '/about-us/categories/page3', :title => 'Test Page 3', :body => 'Test page body 3', :show_in_sidebar => true)
+    visit "/"
+    click_link 'Test Page 3'
+    page.should have_content('Test page body 3')
   end
 
 end
