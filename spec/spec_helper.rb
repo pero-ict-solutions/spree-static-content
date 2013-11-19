@@ -5,6 +5,7 @@ require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 
 require 'ffaker'
 require 'rspec/rails'
+require 'database_cleaner'
 
 # Run any available migration
 ActiveRecord::Migrator.migrate File.expand_path("../dummy/db/migrate/", __FILE__)
@@ -38,4 +39,20 @@ RSpec.configure do |config|
   config.include Spree::TestingSupport::UrlHelpers
 
   config.include Capybara::DSL
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
 end
+
+
