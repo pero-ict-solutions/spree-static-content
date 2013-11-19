@@ -29,6 +29,9 @@ spree/layouts/layout_file_name). This file will not be prefixed with an undersco
 To render a partial, specify the path in the layout file name and check the 'Render layout as partial' option. The
 path specified in the layout area will not have an underscore, but it will be required in the filename.
 
+Also note the availability of the render_snippet helper which finds a page by its slug and renders the raw page 
+body anywhere in your view.
+
 **Options**
 
 Use the 'Show in' checkboxes to specify whether to display the page links in the header, footer or sidebar. The 
@@ -38,21 +41,60 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 ## Basic Installation
 
+**For Spree HEAD**
+
+1. Add the following to your Gemfile
+
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content'
+```
+
+2. Run `bundle install`
+3. To copy and apply migrations run: `rails g spree_static_content:install`
+
+**For Spree 1.3.x**
+
+1. Add the following to your Gemfile
+
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-3-stable'
+```
+
+2. Run `bundle install`
+3. To copy and apply migrations run: `rails g spree_static_content:install`
+
+
+**For Spree 1.2.x**
+
+1. Add the following to your Gemfile
+
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-2-stable'
+```
+
+2. Run `bundle install`
+3. To copy and apply migrations run: `rails g spree_static_content:install`
+
+
 **For Spree 1.1.x**
 
 1. Add the following to your Gemfile
-<pre>
-  gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :branch => '1-1-stable'
-</pre>
+
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-1-stable'
+```
+
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
 
 **For Spree 1.0.x**
 
 1. Add the following to your Gemfile
-<pre>
-  gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git', :branch => '1-0-stable'
-</pre>
+
+```
+gem 'spree_static_content', :github => 'spree/spree_static_content', :branch => '1-0-stable'
+```
+
 2. Run `bundle install`
 3. To copy and apply migrations run: `rails g spree_static_content:install`
 

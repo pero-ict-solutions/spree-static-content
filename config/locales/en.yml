@@ -1,39 +1,40 @@
 ---
 en:
-  activerecord:
-    attributes:
-      page: &page_labels
-        title: Title
-        slug: Slug
-        body: Body
-        foreign_link: Foreign link (URL)
-        show_in_sidebar: Show in sidebar
-        show_in_header: Show in header
-        show_in_footer: Show in footer
-        position: Position
-        visible: Visible
-        meta_keywords: Meta Keywords
-        meta_description: Meta Description
-        meta_title: Meta Title
-        layout: Layout
-    models:
-      page:
-        one: Page
-        many: Pages
+  spree:
+    activerecord:
+      attributes:
+        spree/page: &page_labels
+          title: Title
+          slug: Slug
+          body: Body
+          foreign_link: Foreign link (URL)
+          show_in_sidebar: Show in sidebar
+          show_in_header: Show in header
+          show_in_footer: Show in footer
+          position: Position
+          visible: Visible
+          meta_keywords: Meta Keywords
+          meta_description: Meta Description
+          meta_title: Meta Title
+          layout: Layout
+      models:
+        page:
+          one: Page
+          many: Pages
 
-  helpers:
-    label:
-      page:
-        <<: *page_labels
+    helpers:
+      label:
+        page:
+          <<: *page_labels
 
-  page: Page
-  pages: Pages
-  static_content:
-    static_pages: Static pages
-    static_pages_desc: Manage static page with WYSIWYG editor.
-    new_page: New page
-    editing_page: Editing page
-    confirm_delete: Are you sure ?
-    link: Link
-    meta_title: Meta Title
-    page_navigation_title: "Pages"
+    page: Page
+    pages: Pages
+    static_content:
+      static_pages: Static pages
+      static_pages_desc: Manage static page with WYSIWYG editor.
+      new_page: New page
+      editing_page: Editing page
+      confirm_delete: Are you sure ?
+      link: Link
+      meta_title: Meta Title
+      page_navigation_title: "Pages"

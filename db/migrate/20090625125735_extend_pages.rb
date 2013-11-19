@@ -3,7 +3,7 @@ class ExtendPages < ActiveRecord::Migration
   end
 
   def self.up
-    change_table :pages do |t|
+    change_table :spree_pages do |t|
       t.boolean :show_in_header, :default => false, :null => false
       t.boolean :show_in_footer, :default => false, :null => false
       t.string  :foreign_link
@@ -18,7 +18,7 @@ class ExtendPages < ActiveRecord::Migration
   end
 
   def self.down
-    change_table :pages do |t|
+    change_table :spree_pages do |t|
       t.remove :show_in_header
       t.remove :show_in_footer
       t.remove :foreign_link

@@ -1,15 +1,16 @@
 ---
 pt-BR:
-  pages: Páginas
-  static_content:
-    static_pages: Páginas estáticas
-    static_pages_desc: Administrar página estática com editor visual (WYSIWYG).
-    title: Título
-    slug: Slug
-    body: Corpo
-    new_page: Nova página
-    editing_page: Editando página
-    foreign_link: Link externo (URL)
-    show_in_header: Mostrar no cabeçalho
-    show_in_footer: Mostrar no rodapé
-    position: Posição
+    spree:
+      pages: Páginas
+      static_content:
+        static_pages: Páginas estáticas
+        static_pages_desc: Administrar página estática com editor visual (WYSIWYG).
+        title: Título
+        slug: Slug
+        body: Corpo
+        new_page: Nova página
+        editing_page: Editando página
+        foreign_link: Link externo (URL)
+        show_in_header: Mostrar no cabeçalho
+        show_in_footer: Mostrar no rodapé
+        position: Posição

@@ -1,24 +1,25 @@
 ---
 nl-NL:
-  pages: Statische pagina's
-  static_content:
-    static_pages: Statische pagina's
-    static_pages_desc: Beheer statische pagina's met een WYSIWYG editor.
-    title: Titel
-    slug: Slug
-    body: Body
-    new_page: Nieuwe pagina
-    editing_page: Pagina bewerken
-    foreign_link: Externe link (URL)
-    show_in_header: Toon in header
-    show_in_footer: Toon in footer
-    position: Positie
-    visible: Zichtbaar?
-    confirm_delete: Weet u zeker dat u deze pagina wilt verwijderen ?
-    link: Link
-    meta_title: Meta Titel
-    meta_keywords: Meta Keywords
-    meta_description: Meta Description
-    layout: Layout
-    show_in_sidebar: Toon in zijbalk?
-    page_navigation_title: "Pagina's"
+    spree:
+      pages: Statische pagina's
+      static_content:
+        static_pages: Statische pagina's
+        static_pages_desc: Beheer statische pagina's met een WYSIWYG editor.
+        title: Titel
+        slug: Slug
+        body: Body
+        new_page: Nieuwe pagina
+        editing_page: Pagina bewerken
+        foreign_link: Externe link (URL)
+        show_in_header: Toon in header
+        show_in_footer: Toon in footer
+        position: Positie
+        visible: Zichtbaar?
+        confirm_delete: Weet u zeker dat u deze pagina wilt verwijderen ?
+        link: Link
+        meta_title: Meta Titel
+        meta_keywords: Meta Keywords
+        meta_description: Meta Description
+        layout: Layout
+        show_in_sidebar: Toon in zijbalk?
+        page_navigation_title: "Pagina's"

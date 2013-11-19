@@ -1,33 +1,34 @@
 ---
 ru:
-  activerecord:
-    attributes:
-      page:
-        title: Заголовок
-        slug: Постоянная ссылка
-        body: Основной текст
-        foreign_link: "Внешняя ссылка (URL)"
-        show_in_header: "Отображать в верхнем меню"
-        show_in_footer: "Отображать в нижнем меню"
-        show_in_sidebar: "Отображать в боковом меню"
-        position: "Позиция в меню"
-        visible: "Публиковать"
-        meta_keywords: "Ключевые слова"
-        meta_description: "Описание"
-        layout: "Макет"
-    models:
-      page:
-        one: Страница
-        few: Страницы
-        many: Страниц
+    spree:
+      activerecord:
+        attributes:
+          spree/page:
+            title: Заголовок
+            slug: Постоянная ссылка
+            body: Основной текст
+            foreign_link: "Внешняя ссылка (URL)"
+            show_in_header: "Отображать в верхнем меню"
+            show_in_footer: "Отображать в нижнем меню"
+            show_in_sidebar: "Отображать в боковом меню"
+            position: "Позиция в меню"
+            visible: "Публиковать"
+            meta_keywords: "Ключевые слова"
+            meta_description: "Описание"
+            layout: "Макет"
+        models:
+          page:
+            one: Страница
+            few: Страницы
+            many: Страниц
 
-  page: "Страница"
-  pages: "Страницы"
-  static_content:
-    static_pages: "Статические страницы"
-    static_pages_desc: "Управление статическими страницами"
-    new_page: "Новая страница"
-    editing_page: "Редактирование страницы"
-    confirm_delete: "Вы уверены, что хотите удалить страницу?"
-    link: "Ссылка"
-    meta_title: "Мета заголовок"
+      page: "Страница"
+      pages: "Страницы"
+      static_content:
+        static_pages: "Статические страницы"
+        static_pages_desc: "Управление статическими страницами"
+        new_page: "Новая страница"
+        editing_page: "Редактирование страницы"
+        confirm_delete: "Вы уверены, что хотите удалить страницу?"
+        link: "Ссылка"
+        meta_title: "Мета заголовок"

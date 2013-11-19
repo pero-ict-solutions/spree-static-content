@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_static_content'
   s.version     = version
   s.summary     = 'Extention to manage the static pages for your Spree shop.'
-  s.required_ruby_version = '>= 1.8.7'
+  s.required_ruby_version = '>= 1.9.3'
 
   s.authors            = [%q{Peter Berkenbosch}, %q{Roman Smirnov}]
   s.email             = 'peter@pero-ict.nl'
@@ -15,11 +15,11 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 1.3.0'
+  s.add_dependency 'spree_core', '~> 2.2.0.beta'
 
-  s.add_development_dependency 'capybara', '1.0.1'
-  s.add_development_dependency 'factory_girl', '~> 2.6'
+  s.add_development_dependency 'capybara', '~> 2.1.0'
+  s.add_development_dependency 'factory_girl', '~> 4.2'
   s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'rspec-rails',  '~> 2.7'
+  s.add_development_dependency 'rspec-rails',  '~> 2.12.0'
   s.add_development_dependency 'sqlite3'
 end
