@@ -1,7 +1,0 @@
-h2. Contributors list - Thanks guys!
-
-|Maxim Filatov|http://github.com/Bregor|
-|Marcin Raczkowski|http://github.com/swistak|
-|Roman Smirnov|http://github.com/romul|
-|Eliot Sykes|http://github.com/eliotsykes|
-|Oliver Azevedo Barnes|http://github.com/oliverbarnes|

@@ -1,5 +1,6 @@
-<div class="row">
-  <div class="alpha ten columns">
+<div data-hook="admin_page_form_fields">
+  <div class="left eight columns alpha" data-hook="admin_page_form_left">
+
     <%= f.field_container :title do %>
       <%= f.label :title %> <span class="required">*</span><br />
       <%= f.text_field :title, :class => 'fullwidth title' %>
@@ -13,13 +14,57 @@
     <% end %>
 
     <%= f.field_container :body do %>
-      <%= f.label :body %><span class="required">*</span><br />
-      <%= f.text_area :body, {:class => 'fullwidth'} %>
+      <%= f.label :body %> <span class="required">*</span><br />
+      <%= f.text_area :body, {rows: 12, :class => 'fullwidth'} %>
       <%= f.error_message_on :body %>
     <% end %>
+
   </div>
-  
-  <div class="omega six columns">
+  <div class="right four columns omega" data-hook="admin_page_form_right">
+
+    <%= f.field_container :layout do %>
+      <%= f.label :layout %><br />
+      <%= f.text_field :layout, :class => 'fullwidth title' %>
+    <% end %>
+
+    <%= f.field_container :foreign_link do %>
+      <%= f.label :foreign_link %><br />
+      <%= f.text_field :foreign_link, :class => 'fullwidth title' %>
+    <% end %>
+
+    <%= f.field_container :position do %>
+      <%= f.label :position %><br />
+      <%= f.number_field :position, :min => 0, :class => 'fullwidth title' %>
+    <% end %>
+
+    <%= f.field_container :show_in_sidebar do %>
+      <%= f.check_box :show_in_sidebar %>
+      <%= f.label :show_in_sidebar %>
+    <% end %>
+
+    <%= f.field_container :show_in_heade do %>
+      <%= f.check_box :show_in_header %>
+      <%= f.label :show_in_header %>
+    <% end %>
+
+    <%= f.field_container :show_in_footer do %>
+      <%= f.check_box :show_in_footer %>
+      <%= f.label :show_in_footer %>
+    <% end %>
+
+    <%= f.field_container :visible do %>
+      <%= f.check_box :visible %>
+      <%= f.label :visible %>
+    <% end %>
+
+    <%= f.field_container :render_layout_as_partial do %>
+      <%= f.check_box :render_layout_as_partial %>
+      <%= f.label :render_layout_as_partial %>
+    <% end %>
+
+  </div>
+  <div data-hook="admin_page_form_meta" class="alpha omega twelve columns">
+
     <%= f.field_container :meta_title do %>
       <%= f.label :meta_title %><br />
       <%= f.text_field :meta_title, :class => 'fullwidth title' %>
@@ -37,44 +82,9 @@
       <%= f.text_field :meta_description, :class => 'fullwidth title' %>
       <%= f.error_message_on :meta_description %>
     <% end %>
-    
-    <%= f.field_container :layout do %>
-      <%= f.label :layout %><br />
-      <%= f.text_field :layout, :class => 'fullwidth title' %>
-    <% end %>
-
-    <%= f.field_container :foreign_link do %>
-      <%= f.label :foreign_link %><br />
-      <%= f.text_field :foreign_link, :class => 'fullwidth title' %>
-    <% end %>
-
-    <%= f.field_container :position do %>
-      <%= f.label :position %><br />
-      <%= f.number_field :position, :min => 0 %>
-    <% end %>
-
-    <ul id="static_page_options">
-      <li>
-        <%= f.check_box :show_in_sidebar %>
-        <%= f.label :show_in_sidebar %>
-      </li>
-      <li>
-        <%= f.check_box :show_in_header %>
-        <%= f.label :show_in_header %>
-      </li>
-      <li>
-        <%= f.check_box :show_in_footer %>
-        <%= f.label :show_in_footer %>
-      </li>
-      <li>
-        <%= f.check_box :visible %>
-        <%= f.label :visible %>
-      </li>
-      <li>
-        <%= f.check_box :render_layout_as_partial %>
-        <%= f.label :render_layout_as_partial %>
-      </li>
-    </ul>
 
   </div>
+  <div class="clear"></div>
+  <div data-hook="admin_page_form_additional_fields"></div>
+  <div class="clear"></div>
 </div>

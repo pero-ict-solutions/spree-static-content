@@ -1,0 +1,37 @@
+---
+sv:
+  activerecord:
+    attributes:
+      spree/page:
+        body: Innehåll
+        foreign_link: "Extern länk (URL)"
+        layout: Layout
+        meta_description: "Meta beskrivning"
+        meta_keywords: "Meta referensord"
+        meta_title: "Meta titel"
+        position: Position
+        render_layout_as_partial: "Rendera layouten som del"
+        show_in_footer: "Visa i sidfot"
+        show_in_header: "Visa i huvudet"
+        show_in_sidebar: "Visa i sidomeny"
+        slug: Permalänk
+        title: Rubrik
+        visible: Synlig
+    models:
+      spree/page:
+        few: Sidor
+        many: Sidor
+        one: Sida
+        other: Sidor
+  spree:
+    admin:
+      tab:
+        pages: Sidor
+    back_to_static_pages_list: "Tillbaka till listan med sidor"
+    page: Sida
+    pages: Sidor
+    static_content:
+      editing_page: "Editera sidan"
+      link: Länk
+      new_page: "Ny sida"
+      static_pages: "Statiska sidor"

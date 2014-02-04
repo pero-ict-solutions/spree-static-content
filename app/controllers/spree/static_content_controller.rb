@@ -17,5 +17,4 @@ class Spree::StaticContentController < Spree::StoreController
     def accurate_title
       @page ? (@page.meta_title.present? ? @page.meta_title : @page.title) : nil
     end
-
 end

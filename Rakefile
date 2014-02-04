@@ -1,22 +1,12 @@
-# encoding: utf-8
 require 'bundler'
 Bundler::GemHelper.install_tasks
-Bundler.setup
 
 require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new
-
 require 'spree/testing_support/common_rake'
 
-desc "Default Task"
-task :default => [ :spec ]
+RSpec::Core::RakeTask.new
 
-namespace :test_app do
-  desc 'Rebuild test and cucumber databases'
-  task :rebuild_dbs do
-    system("cd spec/test_app && rake db:drop db:migrate RAILS_ENV=test && rake db:drop db:migrate RAILS_ENV=cucumber && rake railties:install:migrations FROM=spree_static_content db:migrate")
-  end
-end
+task :default => [:spec]
 
 desc "Generates a dummy app for testing"
 task :test_app do

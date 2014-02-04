@@ -1,40 +1,37 @@
 ---
 es:
-    spree:
-      activerecord:
-        attributes:
-          spree/page: &page_labels
-            title: Título
-            slug: Slug
-            body: Cuerpo
-            foreign_link: Link externo (URL)
-            show_in_sidebar: Mostrar en el sidebar
-            show_in_header: Mostrar en el header
-            show_in_footer: Mostrar en el footer
-            position: Posición
-            visible: Visible
-            meta_keywords: Meta Keywords
-            meta_description: Meta Description
-            meta_title: Meta Title
-            layout: Layout
-        models:
-          page:
-            one: Página
-            many: Páginas
-
-      pages: Páginas
-      static_content:
-        static_pages: Páginas estáticas
-        static_pages_desc: Administrar página estática con el editor WYSIWYG.
-        title: Título
-        slug: Slug
+  activerecord:
+    attributes:
+      spree/page:
         body: Cuerpo
-        new_page: Nueva página
-        editing_page: Edición de página
         foreign_link: Enlace externo (URL)
         show_in_header: Mostrar en la cabecera
         show_in_footer: Mostrar en el pie de página
+        layout: Disposición
+        meta_description: "Meta Descripción"
+        meta_keywords: "Meta Palabras"
+        meta_title: "Meta Título"
         position: Posición
+        render_layout_as_partial: "Renderizar disposición como parciales"
+        show_in_sidebar: "Mostrar en el barra lateral"
+        slug: Slug
+        title: Título
         visible: Visible
-        confirm_delete: ¿Estás seguro?
-        link: Enlace
+    models:
+      spree/page:
+        few: Páginas
+        many: Páginas
+        one: Página
+        other: Páginas
+  spree:
+    admin:
+      tab:
+        pages: Páginas
+    back_to_static_pages_list: "Volver a la lista de páginas estáticas"
+    page: Página
+    pages: Páginas
+    static_content:
+      static_pages: "Páginas estáticas"
+      new_page: "Nueva página"
+      editing_page: "Edición de página"
+      link: Enlace

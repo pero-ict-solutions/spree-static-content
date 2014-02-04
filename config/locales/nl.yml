@@ -1,0 +1,37 @@
+---
+nl:
+  activerecord:
+    attributes:
+      spree/page:
+        body: Body
+        foreign_link: "Externe link (URL)"
+        layout: Layout
+        meta_description: "Meta Description"
+        meta_keywords: "Meta Keywords"
+        meta_title: "Meta Title"
+        position: Positie
+        render_layout_as_partial: "Render layout als gedeeltelijke"
+        show_in_footer: "Toon in footer?"
+        show_in_header: "Toon in header?"
+        show_in_sidebar: "Toon in zijbalk?"
+        slug: Slug
+        title: Titel
+        visible: Zichtbaar?
+    models:
+      spree/page:
+        few: "Statische pagina's"
+        many: "Statische pagina's"
+        one: Page
+        other: "Statische pagina's"
+  spree:
+    admin:
+      tab:
+        pages: "Statische pagina's"
+    back_to_static_pages_list: "Terug naar statische pagina's"
+    page: Page
+    pages: "Statische pagina's"
+    static_content:
+      editing_page: "Pagina bewerken"
+      link: Link
+      new_page: "Nieuwe pagina"
+      static_pages: "Statische pagina's"
