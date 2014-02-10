@@ -1,0 +1,11 @@
+/*
+ *= require spree/frontend
+*/
+
+/* Sidebar */
+nav#pages .pages-root {
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(217, 217, 219);
+  margin-bottom: 5px;
+  font-size: 14px;
+}

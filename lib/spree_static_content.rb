@@ -1,5 +1,6 @@
-require 'spree/core'
+require 'spree_core'
 require 'spree_static_content/engine'
+require 'coffee_script'
 
 module StaticPage
   def self.remove_spree_mount_point(path)

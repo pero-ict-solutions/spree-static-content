@@ -16,23 +16,23 @@ ru:
         meta_description: "Описание"
         layout: "Макет"
         render_layout_as_partial: "Использовать макет как шаблон страниц"
+        meta_title: "Мета заголовок"
     models:
-      page:
+      spree/page:
         one: Страница
         few: Страницы
         many: Страниц
+        other: Страницы
   spree:
     page: "Страница"
     pages: "Страницы"
     static_content:
       static_pages: "Статические страницы"
-      static_pages_desc: "Управление статическими страницами"
       new_page: "Новая страница"
       editing_page: "Редактирование страницы"
-      confirm_delete: "Вы уверены, что хотите удалить страницу?"
       link: "Ссылка"
-      meta_title: "Мета заголовок"
     back_to_static_pages_list: "Назад к списку страниц"
     admin:
       tab:
         pages: "Страницы"
+

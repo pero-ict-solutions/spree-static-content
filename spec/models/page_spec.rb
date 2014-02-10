@@ -1,16 +1,28 @@
 require 'spec_helper'
 
 describe Spree::Page do
-  before(:each) do
-    @page = Spree::Page.create(
-    :title => 'test page',
-    :slug => 'test-page',
-    :body => 'this is a test page'
-    )
+  let!(:page) { create(:page) }
+
+  context 'factory' do
+    it 'is valid' do
+      expect(page).to be_valid
+    end
   end
 
-  it "should be valid" do
-    @page.should be_valid
+  it 'always add / prefix to slug' do
+    page = create(:page, slug: 'hello')
+    expect(page.slug).to eq '/hello'
   end
 
+  context '.link' do
+    it 'return slug if foreign_link blank' do
+      page = create(:page, slug: 'hello')
+      expect(page.link).to eq page.slug
+    end
+
+    it 'return foreign_link if set' do
+      page = create(:page, :with_foreign_link, slug: 'hello')
+      expect(page.link).to eq page.foreign_link
+    end
+  end
 end

@@ -1,38 +1,37 @@
 ---
 de:
+  activerecord:
+    attributes:
+      spree/page:
+        body: Inhalt
+        foreign_link: "Externer Link (URL)"
+        layout: Layout
+        meta_description: Meta-Beschreibung
+        meta_keywords: Meta-Schlüsselwörter
+        meta_title: Meta-Titel
+        position: Position
+        render_layout_as_partial: "Rendern Layout als partielle"
+        show_in_footer: "Im Fußzeile anzeigen"
+        show_in_header: "Im Kopfzeile anzeigen"
+        show_in_sidebar: "In der Seitenleiste anzeigen"
+        slug: Pfad
+        title: Titel
+        visible: Sichtbar
+    models:
+      spree/page:
+        few: Seiten
+        many: Seiten
+        one: Seite
+        other: Seiten
   spree:
-    activerecord:
-      attributes:
-        spree/page: &page_labels
-          title: Titel
-          slug: Pfad
-          body: Inhalt
-          foreign_link: Externer Link (URL)
-          show_in_sidebar: In der 'Sidebar' anzeigen
-          show_in_header: Im 'Header' anzeigen
-          show_in_footer: Im 'Footer' anzeigen
-          position: Position
-          visible: Sichtbar
-          meta_keywords: Meta-Schlüsselwörter
-          meta_description: Meta-Beschreibung
-          meta_title: Meta-Titel
-          layout: Layout
-      models:
-        spree/page:
-          one: Seite
-          many: Seiten
-
-    helpers:
-      label:
-        page:
-          <<: *page_labels
-
+    admin:
+      tab:
+        pages: Seiten
+    back_to_static_pages_list: "Zurück zu den statischen Seiten Liste"
     page: Seite
     pages: Seiten
     static_content:
       static_pages: Statische Seiten
-      static_pages_desc: Verwaltung statischer Seiten mit einem WYSIWYG-Editor
       new_page: Neue Seite
       editing_page: Seite bearbeiten
-      confirm_delete: Sind Sie sicher?
       link: Link
