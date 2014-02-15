@@ -17,6 +17,7 @@ ru:
         layout: "Макет"
         render_layout_as_partial: "Использовать макет как шаблон страниц"
         meta_title: "Мета заголовок"
+        page_navigation_title: "Страницы"
     models:
       spree/page:
         one: Страница
