@@ -1,0 +1,39 @@
+---
+ro:
+  activerecord:
+    attributes:
+      spree/page:
+        title: Titlu
+        slug: Permalink
+        body: Content de bază
+        foreign_link: "Link extern (URL)"
+        show_in_header: "Arată în header"
+        show_in_footer: "Arată în blocul de jos"
+        show_in_sidebar: "Arată în bara laterală"
+        position: "Poziția în meniu"
+        visible: "Vizibilitate"
+        meta_keywords: "Cuvinte Cheie"
+        meta_description: "Descriere"
+        layout: "Machet"
+        render_layout_as_partial: "Utilizează șablonul ca un machet"
+    models:
+      page:
+        one: Pagină
+        few: Pagini
+        many: Pagini
+  spree:
+    page: Pagină
+    pages: Pagine
+    static_content:
+      static_pages: Pagini statice
+      static_pages_desc: Descrierea paginilor statice
+      new_page: Pagină nouă
+      editing_page: Editarea paginii
+      confirm_delete: Sunteți siguri că doriți să ștergeți această pagină?
+      link: Link
+      meta_title: Titlu meta
+      page_navigation_title: Pagini
+    back_to_static_pages_list: Înapoi la lista de pagini
+    admin:
+      tab:
+        pages: Pagini
