@@ -4,16 +4,16 @@ it:
     attributes:
       spree/page:
         body: Testo
-        foreign_link: "Legame esterno (URL)"
-        layout: Progetto
-        meta_description: "Meta Descrizione"
-        meta_keywords: "Meta Parole Chiave"
-        meta_title: "Meta Titolo"
+        foreign_link: Link esterno (URL)
+        layout: Layout
+        meta_description: Meta Description
+        meta_keywords: Meta Keywords
+        meta_title: Meta Title
         position: Posizione
-        render_layout_as_partial: "Render layout parziale"
-        show_in_footer: "Mostra nel footer"
-        show_in_header: "Mostra nell'header"
-        show_in_sidebar: "Mostra nella sidebar"
+        render_layout_as_partial: Usa layout come partial
+        show_in_footer: Mostra nel footer
+        show_in_header: Mostra nell'header
+        show_in_sidebar: Mostra nella sidebar
         slug: Slug
         title: Titolo
         visible: Visibile
@@ -27,11 +27,11 @@ it:
     admin:
       tab:
         pages: Pagine
-    back_to_static_pages_list: "Torna alla lista delle pagine statiche"
+    back_to_static_pages_list: Torna alla lista delle pagine statiche
     page: Pagina
     pages: Pagine
     static_content:
       static_pages: Pagine statiche
       new_page: Nuova pagina
       editing_page: Modifica pagina
-      link: Legame
+      link: Link
