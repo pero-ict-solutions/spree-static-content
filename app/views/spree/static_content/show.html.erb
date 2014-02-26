@@ -12,9 +12,9 @@
   <% end -%>
 
   <% content_for :sidebar do %>
-    <% if "products" == @current_controller && @taxon %>
+    <% if defined? @products && defined? @taxon %>
       <%= render :partial => "spree/shared/filters" %>
-    <% else %>
+    <% elsif defined? @taxonomies %>
       <%= render :partial => "spree/shared/taxonomies" %>
     <% end %>
   <% end %>
