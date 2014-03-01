@@ -1,8 +1,9 @@
 # Spree Static Content
 
 [![Build Status](https://api.travis-ci.org/spree/spree_static_content.png?branch=master)](https://travis-ci.org/spree/spree_static_content)
+[![Code Climate](https://codeclimate.com/github/spree/spree_static_content.png)](https://codeclimate.com/github/spree/spree_static_content)
 
-Good, clean content management of pages for Spree.  You can use this to:
+Good, clean content management of pages for Spree. You can use this to:
 
 - Add and manage static pages such as an 'About' page.
 - Show a static page instead of existing dynamic pages such as the home page,
