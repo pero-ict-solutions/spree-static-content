@@ -1,5 +1,6 @@
-<div class="row">
-  <div class="alpha ten columns">
+<div data-hook="admin_page_form_fields">
+
+  <div class="alpha ten columns" data-hook="admin_page_form_left">
     <%= f.field_container :title do %>
       <%= f.label :title %> <span class="required">*</span><br />
       <%= f.text_field :title, :class => 'fullwidth title' %>
@@ -19,7 +20,7 @@
     <% end %>
   </div>
   
-  <div class="omega six columns">
+  <div class="omega six columns" data-hook="admin_page_form_right">
     <%= f.field_container :meta_title do %>
       <%= f.label :meta_title %><br />
       <%= f.text_field :meta_title, :class => 'fullwidth title' %>
@@ -77,4 +78,9 @@
     </ul>
 
   </div>
+
+  <div class="clear"></div>
+  <div data-hook="admin_page_form_additional_fields"></div>
+  <div class="clear"></div>
+  
 </div>
