@@ -2,5 +2,5 @@
   <li><%= link_to page.title, page.foreign_link, target: '_blank', ref: 'nofollow' %></li>
 <% else %>
   <% page_uri = Rails.application.routes.named_routes[:spree].path.spec.to_s == '/' ? page.slug : Rails.application.routes.named_routes[:spree].path.spec.to_s + page.slug %>
-  <li class="<%= 'current' if (request.fullpath.gsub('//','/') == page_uri) %>"><%= link_to page.title, page_uri %></li>
+  <li class="<%= 'current' if (request.fullpath.gsub('//','/') == page_uri) %>"><%= link_to page.title, page_uri, ref: 'nofollow' %></li>
 <% end %>
