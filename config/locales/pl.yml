@@ -9,7 +9,9 @@ pl:
         show_in_footer: Pokaż w stopce
         position: Pozycja
         visible: Widoczna
-        meta_title: Tytół (w nagłówku przeglądarki)
+        confirm_delete: Jesteś pewien ?
+        link: Odnośnik
+        meta_title: Tytuł (w nagłówku przeglądarki)
         meta_keywords: Słowa kluczowe (SEO)
         meta_description: Skrócony opis (SEO)
         layout: Układ
