@@ -35,9 +35,9 @@ private
     unless new_record?
       return unless prev_position = Spree::Page.find(self.id).position
       if prev_position > self.position
-        Spree::Page.update_all("position = position + 1", ["? <= position AND position < ?", self.position, prev_position])
+        Spree::Page.where("? <= position AND position < ?", self.position, prev_position).update_all("position = position + 1")
       elsif prev_position < self.position
-        Spree::Page.update_all("position = position - 1", ["? < position AND position <= ?", prev_position,  self.position])
+        Spree::Page.where("? < position AND position <= ?", prev_position,  self.position).update_all("position = position - 1")
       end
     end
 
