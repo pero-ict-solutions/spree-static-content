@@ -17,6 +17,6 @@ pl:
         visible: Widoczna
         confirm_delete: Jesteś pewien ?
         link: Odnośnik
-        meta_title: Tytół (w nagłówku przeglądarki)
+        meta_title: Tytuł (w nagłówku przeglądarki)
         meta_keywords: Słowa kluczowe (SEO)
         meta_description: Skrócony opis (SEO)
