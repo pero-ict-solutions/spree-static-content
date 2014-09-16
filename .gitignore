@@ -3,3 +3,4 @@ nbproject
 **.gem
 Gemfile.lock
 spec/dummy/
+coverage
