@@ -62,7 +62,15 @@
       <%= f.label :render_layout_as_partial %>
     <% end %>
 
+    <%= f.field_container :stores do %>
+      <%= f.label :stores, Spree.t(:stores)%><br />
+      <% Spree::Store.all.each do |store| %>
+        <%= check_box_tag "page[store_ids][]", store.id, @page.stores.include?(store) %> <%= store.name %>
+      <% end %>
+    <% end %>
+    
   </div>
+
   <div data-hook="admin_page_form_meta" class="alpha omega twelve columns">
 
     <%= f.field_container :meta_title do %>

@@ -25,4 +25,22 @@ describe Spree::Page do
       expect(page.link).to eq page.foreign_link
     end
   end
+
+
+  context "pages in stores" do
+
+    before(:each) do
+      @store = create(:store)
+      @page = create(:page, :stores => [@store])
+      @page2 = create(:page)
+    end
+
+    it 'should correctly find pages by store' do
+      pages_by_store = Spree::Page.by_store(@store)
+      expect(pages_by_store).to include(@page)
+      expect(pages_by_store).to_not include(@page2)
+    end
+
+  end
+
 end
