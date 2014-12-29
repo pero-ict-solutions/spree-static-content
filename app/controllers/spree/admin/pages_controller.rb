@@ -1,3 +1,6 @@
-class Spree::Admin::PagesController < Spree::Admin::ResourceController
-  
+module Spree
+  module Admin
+    class PagesController < ResourceController
+    end
+  end
 end

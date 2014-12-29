@@ -9,11 +9,10 @@ class ExtendPages < ActiveRecord::Migration
       t.string  :foreign_link
       t.integer :position, default: 1, null: false
       if Page.table_exists?
-        Page.order(:updated_at).each_with_index{|page,x| page.update_attribute(:position, x+1)}
+        Page.order(:updated_at).each_with_index { |page, x| page.update_attribute(:position, x + 1) }
       else
-        Spree::Page.order(:updated_at).each_with_index{|page,x| page.update_attribute(:position, x+1)}
+        Spree::Page.order(:updated_at).each_with_index { |page, x| page.update_attribute(:position, x + 1) }
       end
-
     end
   end
 

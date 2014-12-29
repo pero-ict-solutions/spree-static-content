@@ -12,10 +12,10 @@ Gem::Specification.new do |s|
   s.description = s.summary
   s.required_ruby_version = '>= 2.1.0'
 
-  s.authors      = [%q{Peter Berkenbosch}, %q{Roman Smirnov}]
+  s.authors      = ['Peter Berkenbosch', 'Roman Smirnov']
   s.email        = 'peter@pero-ict.nl'
-  s.homepage     = 'http://spreecommerce.com/extensions/139-static-content'
-  s.license      = %q{BSD-3}
+  s.homepage     = 'https://github.com/spree-contrib/spree_static_content'
+  s.license      = 'BSD-3'
 
   s.files        = `git ls-files`.split("\n")
   s.test_files   = `git ls-files -- spec/*`.split("\n")
