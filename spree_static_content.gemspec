@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = version
   s.summary     = 'Extention to manage the static pages for your Spree shop.'
   s.description = s.summary
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.1.0'
 
   s.authors      = [%q{Peter Berkenbosch}, %q{Roman Smirnov}]
   s.email        = 'peter@pero-ict.nl'
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.4.0.beta'
+  s.add_dependency 'spree_core', '~> 3.0.0.beta'
 
   s.add_development_dependency 'capybara', '~> 2.2.1'
   s.add_development_dependency 'factory_girl', '~> 4.4'

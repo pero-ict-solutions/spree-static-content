@@ -6,3 +6,5 @@ spec/dummy/
 .rvmrc
 tmp
 coverage
+.ruby-version
+.ruby-gemset

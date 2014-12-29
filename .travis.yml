@@ -1,23 +1,10 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - 2.0.0
-  - 2.1.0
+  - 2.1
+  - 2.2
+sudo: false
 before_script:
-  - "bundle exec rake test_app"
-script: "DISPLAY=:99.0 bundle exec rspec spec"
-notifications:
-  email:
-    - peter@spreecommerce.com
-  irc:
-    channels:
-      - "irc.freenode.org#spree"
-    use_notice: true
-branches:
-  only:
-    - master
-    - 1-3-stable
-    - 2-0-stable
-    - 2-1-stable
-    - 2-2-stable
-    - 2-3-stable
+  - sh -e /etc/init.d/xvfb start
+  - export DISPLAY=:99.0
+  - bundle exec rake test_app
+script: bundle exec rspec spec
