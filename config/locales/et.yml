@@ -19,19 +19,9 @@ et:
         visible: Nähtav
     models:
       spree/page:
-        few: Leheküljed
-        many: Leheküljed
         one: Lehekülg
         other: Leheküljed
   spree:
-    admin:
-      tab:
-        pages: Leheküljed
-    back_to_static_pages_list: "Tagasi staatiliste lehtede nimekiri"
-    page: Lehekülg
-    pages: Leheküljed
     static_content:
-      static_pages: Leheküljed
-      new_page: Uus lehekülg
-      editing_page: Muudan lehekülge
       link: Link
+      new_page: "Uus lehekülg"

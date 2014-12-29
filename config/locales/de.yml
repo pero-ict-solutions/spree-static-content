@@ -19,19 +19,9 @@ de:
         visible: Sichtbar
     models:
       spree/page:
-        few: Seiten
-        many: Seiten
         one: Seite
         other: Seiten
   spree:
-    admin:
-      tab:
-        pages: Seiten
-    back_to_static_pages_list: "Zurück zu den statischen Seiten Liste"
-    page: Seite
-    pages: Seiten
     static_content:
-      static_pages: Statische Seiten
-      new_page: Neue Seite
-      editing_page: Seite bearbeiten
       link: Link
+      new_page: "Neue Seite"

@@ -19,19 +19,9 @@ pt:
         visible: Visível
     models:
       spree/page:
-        few: Páginas
-        many: Páginas
         one: Página
         other: Páginas
   spree:
-    admin:
-      tab:
-        pages: Páginas
-    back_to_static_pages_list: "Voltar à lista de páginas estáticas"
-    page: Página
-    pages: Páginas
     static_content:
-      editing_page: "Editar página"
       link: Link
       new_page: "Nova página"
-      static_pages: "Páginas estáticas"

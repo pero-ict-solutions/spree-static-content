@@ -19,19 +19,9 @@ sv:
         visible: Synlig
     models:
       spree/page:
-        few: Sidor
-        many: Sidor
         one: Sida
         other: Sidor
   spree:
-    admin:
-      tab:
-        pages: Sidor
-    back_to_static_pages_list: "Tillbaka till listan med sidor"
-    page: Sida
-    pages: Sidor
     static_content:
-      editing_page: "Editera sidan"
       link: Länk
       new_page: "Ny sida"
-      static_pages: "Statiska sidor"

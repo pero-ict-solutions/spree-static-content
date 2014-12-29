@@ -5,33 +5,23 @@ es:
       spree/page:
         body: Cuerpo
         foreign_link: Enlace externo (URL)
-        show_in_header: Mostrar en la cabecera
-        show_in_footer: Mostrar en el pie de página
         layout: Disposición
         meta_description: "Meta Descripción"
         meta_keywords: "Meta Palabras"
         meta_title: "Meta Título"
         position: Posición
         render_layout_as_partial: "Renderizar disposición como parciales"
+        show_in_footer: "Mostrar en el pie de página"
+        show_in_header: "Mostrar en la cabecera"
         show_in_sidebar: "Mostrar en el barra lateral"
         slug: Slug
         title: Título
         visible: Visible
     models:
       spree/page:
-        few: Páginas
-        many: Páginas
         one: Página
         other: Páginas
   spree:
-    admin:
-      tab:
-        pages: Páginas
-    back_to_static_pages_list: "Volver a la lista de páginas estáticas"
-    page: Página
-    pages: Páginas
     static_content:
-      static_pages: "Páginas estáticas"
-      new_page: "Nueva página"
-      editing_page: "Edición de página"
       link: Enlace
+      new_page: "Nueva página"
