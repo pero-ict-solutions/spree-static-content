@@ -1,7 +1,4 @@
-require 'spec_helper'
-
-feature 'Static Content Page', js: true do
-
+RSpec.feature 'Static Content Page', :js do
   let!(:store) { create(:store, default: true) }
 
   context 'render page' do
