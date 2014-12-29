@@ -1,13 +1,15 @@
 # Spree Static Content
 
-[![Build Status](https://api.travis-ci.org/spree/spree_static_content.png?branch=master)](https://travis-ci.org/spree/spree_static_content)
-[![Code Climate](https://codeclimate.com/github/spree/spree_static_content.png)](https://codeclimate.com/github/spree/spree_static_content)
+[![Build Status](https://travis-ci.org/spree-contrib/spree_static_content.svg?branch=master)](https://travis-ci.org/spree-contrib/spree_static_content)
+[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_static_content/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/spree_static_content)
 
 Good, clean content management of pages for Spree. You can use this to:
 
 - Add and manage static pages such as an 'About' page.
 - Show a static page instead of existing dynamic pages such as the home page,
   products pages, and taxon pages.
+
+---
 
 ## HowTo
 
@@ -40,55 +42,39 @@ position setting alters the order in which they appear.
 
 Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked, the page will not be available.
 
+---
+
 ## Basic Installation
 
 Add to your `Gemfile`:
 
 ```ruby
-gem 'spree_static_content', github: 'spree/spree_static_content', branch: 'master'
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: 'master'
 ```
 
 Run:
 
-    bundle install
-    rails g spree_static_content:install
+```sh
+bundle && bundle exec rails g spree_static_content:install
+```
 
 That's all!
 
 **NOTE: Check [Versionfile][1] for corresponding gem `branch` for your Spree version.**
 
+---
+
 ## Contributing
 
-In the spirit of [free software][2], **everyone** is encouraged to help improve this project.
+See corresponding [guidelines][2]
 
-Here are some ways *you* can contribute:
+---
 
-* by using prerelease versions
-* by reporting [bugs][3]
-* by suggesting new features
-* by writing translations
-* by writing or editing documentation
-* by writing specifications
-* by writing code (*no patch is too small*: fix typos, add comments, clean up inconsistent whitespace)
-* by refactoring code
-* by resolving [issues][3]
-* by reviewing patches
+Copyright (c) 2008-2015 [Peter Berkenbosch][4] and [contributors][5], released under the [New BSD License][6]
 
-Starting point:
-
-* Fork the repo
-* Clone your repo
-* Run `bundle install`
-* Run `bundle exec rake test_app` to create the test application in `spec/test_app`
-* Make your changes
-* Ensure specs pass by running `bundle exec rspec spec`
-* Submit your pull request
-
-Copyright (c) 2014 [Peter Berkenbosch][4] and [contributors][5], released under the [New BSD License][6]
-
-[1]: https://github.com/spree/spree_static_content/blob/master/Versionfile
-[2]: http://www.fsf.org/licensing/essays/free-sw.html
-[3]: https://github.com/spree/spree_static_content/issues
+[1]: https://github.com/spree-contrib/spree_static_content/blob/master/Versionfile
+[2]: https://github.com/spree-contrib/spree_static_content/blob/master/CONTRIBUTING.md
+[3]: https://github.com/spree-contrib/spree_static_content/issues
 [4]: https://github.com/peterberkenbosch
-[5]: https://github.com/spree/spree_static_content/graphs/contributors
-[6]: https://github.com/spree/spree_static_content/blob/master/LICENSE.md
+[5]: https://github.com/spree-contrib/spree_static_content/graphs/contributors
+[6]: https://github.com/spree-contrib/spree_static_content/blob/master/LICENSE.md
