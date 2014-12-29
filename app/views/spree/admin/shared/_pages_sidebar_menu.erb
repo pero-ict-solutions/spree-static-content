@@ -1,0 +1,3 @@
+<% if can? :admin, Spree::Page %>
+  <%= tab Spree.t(:pages), url: spree.admin_pages_url, icon: 'leaf' %>
+<% end %>
