@@ -1,53 +1,44 @@
-<%= render 'spree/admin/shared/configuration_menu' %>
-
-<% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t("static_content.new_page"), new_object_url, :icon => 'icon-plus', :id => 'admin_new_page' %></li>
+<% content_for :page_title do %>
+  <%= Spree::Page.model_name.human(count: :many) %>
 <% end %>
 
-<% content_for :page_title do %>
-   <%= Spree.t("static_content.static_pages") %>
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_page, scope: :static_content), new_object_url, icon: 'icon-plus', class: 'btn-primary', id: 'admin_new_page' %>
 <% end %>
 
 <% if @pages.any? %>
-<table class="index responsive" id="listing_pages" data-hook>
-  <colgroup>
-    <col style="width: 40%">
-    <col style="width: 35%">
-    <col style="width: 10%">
-    <col style="width: 15%">
-  </colgroup>
-  <thead>
-    <tr data-hook="admin_pages_index_headers">
-      <th><%= Spree::Page.human_attribute_name(:title) %></th>
-      <th><%= Spree.t("static_content.link") %></th>
-      <th><%= Spree::Page.human_attribute_name(:visible) %></th>
-      <th data-hook="admin_pages_index_header_actions" class="actions"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr data-hook="admin_pages_index_rows" class="<%= cycle('odd', 'even') %>" id="<%= dom_id page %>">
-        <td>
-          <%= page.title %>
-        </td>
-        <td>
-          <%= link_to page.link, page.link, :target => '_blank' %>
-        </td>
-        <td class="align-center">
-          <%= content_tag(:i, '', :class => 'icon-ok green') if page.visible %>
-        </td>
-        <td class="actions" data-hook="admin_pages_index_row_actions">
-          <%= link_to_edit page, :no_text => true %>
-          <%= link_to_delete page, :no_text => true %>
-        </td>
+  <table class="table" id="listing_pages" data-hook>
+    <colgroup>
+      <col style="width: 40%">
+      <col style="width: 35%">
+      <col style="width: 10%">
+      <col style="width: 15%">
+    </colgroup>
+    <thead>
+      <tr data-hook="admin_pages_index_headers">
+        <th><%= Spree::Page.human_attribute_name(:title) %></th>
+        <th><%= Spree.t(:link, scope: :static_content) %></th>
+        <th><%= Spree::Page.human_attribute_name(:visible) %></th>
+        <th data-hook="admin_pages_index_header_actions" class="actions"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @pages.each do |page| %>
+        <tr data-hook="admin_pages_index_rows" class="<%= cycle('odd', 'even') %>" id="<%= dom_id page %>">
+          <td><%= page.title %></td>
+          <td><%= link_to page.link, page.link, target: '_blank' %></td>
+          <td><%= content_tag(:i, '', class: 'icon icon-ok') if page.visible %></td>
+          <td class="actions" data-hook="admin_pages_index_row_actions">
+            <%= link_to_edit page, no_text: true %>
+            <%= link_to_delete page, no_text: true %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
-    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/page')) %>,
+  <div class="alert alert-warning no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: Spree::Page.model_name.human) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_page_path %>!
   </div>
 <% end %>

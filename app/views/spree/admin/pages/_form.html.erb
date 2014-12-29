@@ -1,98 +1,119 @@
-<div data-hook="admin_page_form_fields">
-  <div class="left eight columns alpha" data-hook="admin_page_form_left">
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:back_to_resource_list, resource: Spree::Page.model_name.human(count: :many)), spree.admin_pages_path, icon: 'arrow-left', class: 'btn-primary' %>
+<% end %>
 
-    <%= f.field_container :title do %>
-      <%= f.label :title %> <span class="required">*</span><br />
-      <%= f.text_field :title, :class => 'fullwidth title' %>
-      <%= f.error_message_on :title %>
-    <% end %>
+<%= form_for [:admin, resource] do |f| %>
+  <div class="row" data-hook="admin_page_form_fields">
+    <div class="col-md-6" data-hook="admin_page_form_left">
+      <div class="form-group">
+        <%= f.label :title %> <span class="required">*</span>
+        <%= f.text_field :title, class: 'form-control' %>
+        <%= f.error_message_on :title %>
+      </div>
 
-    <%= f.field_container :slug do %>
-      <%= f.label :slug %> <span class="required">*</span><br />
-      <%= f.text_field :slug, :class => 'fullwidth title' %>
-      <%= f.error_message_on :slug %>
-    <% end %>
+      <div class="form-group">
+        <%= f.label :slug %> <span class="required">*</span>
+        <%= f.text_field :slug, class: 'form-control' %>
+        <%= f.error_message_on :slug %>
+      </div>
 
-    <%= f.field_container :body do %>
-      <%= f.label :body %> <span class="required">*</span><br />
-      <%= f.text_area :body, {rows: 12, :class => 'fullwidth'} %>
-      <%= f.error_message_on :body %>
-    <% end %>
+      <div class="form-group">
+        <%= f.label :body %> <span class="required">*</span>
+        <%= f.text_area :body, rows: 12, class: 'form-control' %>
+        <%= f.error_message_on :body %>
+      </div>
+    </div>
 
+    <div class="col-md-6" data-hook="admin_page_form_right">
+      <div class="form-group">
+        <%= f.label :layout %>
+        <%= f.text_field :layout, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :foreign_link %>
+        <%= f.text_field :foreign_link, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :position %>
+        <%= f.number_field :position, min: 0, class: 'form-control' %>
+      </div>
+
+      <div class="checkbox">
+        <%= f.label :show_in_sidebar do %>
+          <%= f.check_box :show_in_sidebar %>
+          <%= Spree::Page.human_attribute_name(:show_in_sidebar) %>
+        <% end %>
+      </div>
+
+      <div class="checkbox">
+        <%= f.label :show_in_header do %>
+          <%= f.check_box :show_in_header %>
+          <%= Spree::Page.human_attribute_name(:show_in_header) %>
+        <% end %>
+      </div>
+
+      <div class="checkbox">
+        <%= f.label :show_in_footer do %>
+          <%= f.check_box :show_in_footer %>
+          <%= Spree::Page.human_attribute_name(:show_in_footer) %>
+        <% end %>
+      </div>
+
+      <div class="checkbox">
+        <%= f.label :visible do %>
+          <%= f.check_box :visible %>
+          <%= Spree::Page.human_attribute_name(:visible) %>
+        <% end %>
+      </div>
+
+      <div class="checkbox">
+        <%= f.label :render_layout_as_partial do %>
+          <%= f.check_box :render_layout_as_partial %>
+          <%= Spree::Page.human_attribute_name(:render_layout_as_partial) %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :stores, Spree::Store.model_name.human(count: :many) %>
+        <% Spree::Store.all.each do |store| %>
+          <div class="checkbox">
+            <%= f.label store.name.downcase.to_sym do %>
+              <%= check_box_tag 'page[store_ids][]', store.id, @page.stores.include?(store) %>
+              <%= store.name %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="right four columns omega" data-hook="admin_page_form_right">
 
-    <%= f.field_container :layout do %>
-      <%= f.label :layout %><br />
-      <%= f.text_field :layout, :class => 'fullwidth title' %>
-    <% end %>
+  <div class="row" data-hook="admin_page_form_meta">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :meta_title %>
+        <%= f.text_field :meta_title, class: 'form-control' %>
+        <%= f.error_message_on :meta_title %>
+      </div>
 
-    <%= f.field_container :foreign_link do %>
-      <%= f.label :foreign_link %><br />
-      <%= f.text_field :foreign_link, :class => 'fullwidth title' %>
-    <% end %>
+      <div class="form-group">
+        <%= f.label :meta_keywords %>
+        <%= f.text_field :meta_keywords, class: 'form-control' %>
+        <%= f.error_message_on :meta_keywords %>
+      </div>
 
-    <%= f.field_container :position do %>
-      <%= f.label :position %><br />
-      <%= f.number_field :position, :min => 0, :class => 'fullwidth title' %>
-    <% end %>
-
-    <%= f.field_container :show_in_sidebar do %>
-      <%= f.check_box :show_in_sidebar %>
-      <%= f.label :show_in_sidebar %>
-    <% end %>
-
-    <%= f.field_container :show_in_header do %>
-      <%= f.check_box :show_in_header %>
-      <%= f.label :show_in_header %>
-    <% end %>
-
-    <%= f.field_container :show_in_footer do %>
-      <%= f.check_box :show_in_footer %>
-      <%= f.label :show_in_footer %>
-    <% end %>
-
-    <%= f.field_container :visible do %>
-      <%= f.check_box :visible %>
-      <%= f.label :visible %>
-    <% end %>
-
-    <%= f.field_container :render_layout_as_partial do %>
-      <%= f.check_box :render_layout_as_partial %>
-      <%= f.label :render_layout_as_partial %>
-    <% end %>
-
-    <%= f.field_container :stores do %>
-      <%= f.label :stores, Spree.t(:stores)%><br />
-      <% Spree::Store.all.each do |store| %>
-        <%= check_box_tag "page[store_ids][]", store.id, @page.stores.include?(store) %> <%= store.name %>
-      <% end %>
-    <% end %>
-    
+      <div class="form-group">
+        <%= f.label :meta_description %>
+        <%= f.text_field :meta_description, class: 'form-control' %>
+        <%= f.error_message_on :meta_description %>
+      </div>
+    </div>
   </div>
 
-  <div data-hook="admin_page_form_meta" class="alpha omega twelve columns">
-
-    <%= f.field_container :meta_title do %>
-      <%= f.label :meta_title %><br />
-      <%= f.text_field :meta_title, :class => 'fullwidth title' %>
-      <%= f.error_message_on :meta_title %>
-    <% end %>
-
-    <%= f.field_container :meta_keywords do %>
-      <%= f.label :meta_keywords %><br />
-      <%= f.text_field :meta_keywords, :class => 'fullwidth title' %>
-      <%= f.error_message_on :meta_keywords %>
-    <% end %>
-
-    <%= f.field_container :meta_description do %>
-      <%= f.label :meta_description %><br />
-      <%= f.text_field :meta_description, :class => 'fullwidth title' %>
-      <%= f.error_message_on :meta_description %>
-    <% end %>
-
+  <div class="row" data-hook="admin_page_form_additional_fields">
+    <div class="col-md-12"></div>
   </div>
-  <div class="clear"></div>
-  <div data-hook="admin_page_form_additional_fields"></div>
-  <div class="clear"></div>
-</div>
+
+  <%= render "spree/admin/shared/#{resource.new_record? ? 'new' : 'edit'}_resource_links" %>
+<% end %>
