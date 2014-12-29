@@ -5,9 +5,9 @@ class AddVisibleToPages < ActiveRecord::Migration
   def self.up
     add_column :spree_pages, :visible, :boolean
     if Page.table_exists?
-      Page.update_all :visible => true
+      Page.update_all visible: true
     else
-      Spree::Page.update_all :visible => true
+      Spree::Page.update_all visible: true
     end
   end
 

@@ -1,5 +1,5 @@
 class Spree::StaticContentController < Spree::StoreController
-  rescue_from ActiveRecord::RecordNotFound, :with => :render_404
+  rescue_from ActiveRecord::RecordNotFound, with: :render_404
 
   helper 'spree/products'
   layout :determine_layout

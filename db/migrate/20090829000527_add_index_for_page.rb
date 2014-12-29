@@ -7,4 +7,3 @@ class AddIndexForPage < ActiveRecord::Migration
     remove_index(:spree_pages, :slug)
   end
 end
-

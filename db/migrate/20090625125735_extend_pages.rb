@@ -4,10 +4,10 @@ class ExtendPages < ActiveRecord::Migration
 
   def self.up
     change_table :spree_pages do |t|
-      t.boolean :show_in_header, :default => false, :null => false
-      t.boolean :show_in_footer, :default => false, :null => false
+      t.boolean :show_in_header, default: false, null: false
+      t.boolean :show_in_footer, default: false, null: false
       t.string  :foreign_link
-      t.integer :position, :default => 1, :null => false
+      t.integer :position, default: 1, null: false
       if Page.table_exists?
         Page.order(:updated_at).each_with_index{|page,x| page.update_attribute(:position, x+1)}
       else
