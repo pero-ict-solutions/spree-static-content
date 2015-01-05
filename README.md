@@ -1,7 +1,7 @@
 # Spree Static Content
 
-[![Build Status](https://api.travis-ci.org/spree/spree_static_content.png?branch=master)](https://travis-ci.org/spree/spree_static_content)
-[![Code Climate](https://codeclimate.com/github/spree/spree_static_content.png)](https://codeclimate.com/github/spree/spree_static_content)
+[![Build Status](https://travis-ci.org/spree-contrib/spree_static_content.svg?branch=2-4-stable)](https://travis-ci.org/spree-contrib/spree_static_content)
+[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_static_content/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/spree_static_content)
 
 Good, clean content management of pages for Spree. You can use this to:
 
@@ -45,7 +45,7 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 Add to your `Gemfile`:
 
 ```ruby
-gem 'spree_static_content', github: 'spree/spree_static_content', branch: 'master'
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '2-4-stable'
 ```
 
 Run:
@@ -86,9 +86,9 @@ Starting point:
 
 Copyright (c) 2014 [Peter Berkenbosch][4] and [contributors][5], released under the [New BSD License][6]
 
-[1]: https://github.com/spree/spree_static_content/blob/master/Versionfile
+[1]: https://github.com/spree-contrib/spree_static_content/blob/master/Versionfile
 [2]: http://www.fsf.org/licensing/essays/free-sw.html
-[3]: https://github.com/spree/spree_static_content/issues
+[3]: https://github.com/spree-contrib/spree_static_content/issues
 [4]: https://github.com/peterberkenbosch
-[5]: https://github.com/spree/spree_static_content/graphs/contributors
-[6]: https://github.com/spree/spree_static_content/blob/master/LICENSE.md
+[5]: https://github.com/spree-contrib/spree_static_content/graphs/contributors
+[6]: https://github.com/spree-contrib/spree_static_content/blob/master/LICENSE.md
