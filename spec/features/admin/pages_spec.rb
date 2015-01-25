@@ -3,8 +3,7 @@ RSpec.feature 'Admin Static Content', :js do
 
   context 'when no page exists' do
     background do
-      visit spree.admin_path
-      click_link 'Pages'
+      visit spree.admin_pages_path
     end
 
     scenario 'can create new page' do
@@ -36,8 +35,7 @@ RSpec.feature 'Admin Static Content', :js do
     given!(:static_page) { create(:page) }
 
     background do
-      visit spree.admin_path
-      click_link 'Pages'
+      visit spree.admin_pages_path
     end
 
     scenario 'can be updated' do
@@ -53,6 +51,7 @@ RSpec.feature 'Admin Static Content', :js do
     scenario 'can be deleted' do
       within_row(1) { click_icon :delete }
       page.driver.browser.switch_to.alert.accept unless Capybara.javascript_driver == :poltergeist
+      expect(page).to have_text 'successfully removed!'
       expect(page).not_to have_text static_page.title
     end
   end
