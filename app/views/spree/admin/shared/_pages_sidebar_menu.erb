@@ -1,3 +1,5 @@
 <% if can? :admin, Spree::Page %>
-  <%= tab Spree::Page.model_name.human(count: :many), url: spree.admin_pages_url, icon: 'leaf' %>
+  <ul class="nav nav-sidebar">
+    <%= tab Spree::Page, url: spree.admin_pages_url, icon: 'leaf', label: Spree::Page.model_name.human(count: :many) %>
+  </ul>
 <% end %>
